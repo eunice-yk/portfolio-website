@@ -453,10 +453,17 @@
     .project-header.light-bg .project-tag { background: var(--tint); color: var(--accent); }
 
     /* ── CHAPTERS ── */
-    .chapter { border-bottom: 1px solid var(--divider); }
+    .chapter {
+      border-top: 1px solid var(--divider);
+      background: var(--surface);
+      transition: background 0.15s;
+    }
+    .chapter:last-of-type { border-bottom: 1px solid var(--divider); }
+    .chapter:has(.ch-toggle:hover),
+    .chapter.open { background: var(--tint); }
     .ch-toggle {
       width: 100%;
-      background: none;
+      background: transparent;
       border: none;
       padding: 1.25rem 0;
       display: flex;
@@ -465,18 +472,29 @@
       cursor: pointer;
       text-align: left;
       font-family: var(--font-body);
-      transition: background 0.15s;
+      gap: 1rem;
     }
-    .ch-toggle:hover { background: var(--bg); }
     .ch-toggle-title {
       font-size: 1rem;
       font-weight: 700;
       color: var(--accent);
       font-family: var(--font-display);
-      padding-right: 1rem;
+      flex: 1;
     }
-    .ch-arrow { font-size: 0.85rem; color: var(--muted); transition: transform 0.25s; flex-shrink: 0; }
-    .chapter.open .ch-arrow { transform: rotate(180deg); }
+    .ch-arrow {
+      font-size: 0.75rem;
+      color: var(--muted);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: var(--divider);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chapter.open .ch-arrow { transform: rotate(180deg); background: var(--accent); color: var(--surface); }
     .ch-body { display: none; padding-bottom: 2rem; }
     .chapter.open .ch-body { display: block; }
 
@@ -1002,7 +1020,7 @@
     </div>
 
     <!-- HB Ch1 -->
-    <div class="chapter open" id="hb1">
+    <div class="chapter" id="hb1">
       <div class="container">
         <button class="ch-toggle" onclick="toggleCh('hb1')">
           <span class="ch-toggle-title" data-kr="Ch.1 제품 개발 및 GTM 전략" data-en="Ch.1 Product Development &amp; GTM Strategy">Ch.1 제품 개발 및 GTM 전략</span>
@@ -1327,7 +1345,7 @@
     </div>
 
     <!-- AY Ch1 -->
-    <div class="chapter open" id="ay1">
+    <div class="chapter" id="ay1">
       <div class="container">
         <button class="ch-toggle" onclick="toggleCh('ay1')">
           <span class="ch-toggle-title" data-kr="Ch.1 북미 인플루언서 캠페인. 200명+ 협업, 무상협업 콘텐츠 총 조회수 1,700만+" data-en="Ch.1 North America Influencer Campaigns. 200+ Creators, 17M+ Total Views">Ch.1 북미 인플루언서 캠페인. 200명+ 협업, 무상협업 콘텐츠 총 조회수 1,700만+</span>
