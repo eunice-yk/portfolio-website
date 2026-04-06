@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고윤지 | 글로벌 마케터 포트폴리오</title>
+  <meta name="description" content="고윤지 (Eunice Yunjee Koh). 글로벌 마케터 포트폴리오. GTM, Meta Ads, 인플루언서, Shopify.">
+  <meta property="og:title" content="고윤지 | 글로벌 마케터 포트폴리오">
+  <meta property="og:description" content="HYDROBAE 미국 시장 진출, AXIS-Y 북미 마케팅. 전략부터 실행까지.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F8F9FC;
+      --surface: #FFFFFF;
+      --text: #0F1624;
+      --accent: #1A3667;
+      --cta: #2F6FE0;
+      --tint: #D6E4F7;
+      --divider: #E2E8F0;
+      --muted: #64748B;
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --line-height-body: 1.6;
+    }
+    :root[lang="ko"] {
+      --font-body: 'Pretendard Variable', 'Pretendard', sans-serif;
+      --font-display: 'Pretendard Variable', 'Pretendard', sans-serif;
+      --line-height-body: 1.8;
+    }
+    :root[lang="ko"] h1,
+    :root[lang="ko"] h2,
+    :root[lang="ko"] h3,
+    :root[lang="ko"] h4 {
+      font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: var(--line-height-body);
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248,249,252,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--divider);
+      height: 60px;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-family: var(--font-display);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cta); }
+    #lang-btn {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      color: var(--text);
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      font-family: var(--font-body);
+    }
+    #lang-btn:hover { background: var(--tint); border-color: var(--cta); }
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+    }
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--divider);
+      padding: 1rem 2rem;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 99;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ── FADE IN ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 0; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cta);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 2.5rem;
+      font-family: var(--font-display);
+    }
+
+    /* ── HERO ── */
+    #hero { background: var(--surface); }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: 0 8px 40px rgba(15,22,36,0.12);
+      display: block;
+      background: var(--tint);
+    }
+    .hero-right h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.15;
+      margin-bottom: 0.4rem;
+      font-family: var(--font-display);
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .hero-tag {
+      background: var(--tint);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+    }
+    .hero-traits {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .hero-trait {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .hero-trait::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--cta);
+      flex-shrink: 0;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--cta);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.15s;
+      font-family: var(--font-body);
+    }
+    .btn-primary:hover { background: #1d5ccc; transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.15s;
+      font-family: var(--font-body);
+    }
+    .btn-secondary:hover { background: var(--tint); transform: translateY(-1px); }
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-photo { max-width: 220px; margin: 0 auto; }
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--bg); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-headline {
+      font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-family: var(--font-display);
+      line-height: 1.35;
+    }
+    .about-body p {
+      font-size: 1rem;
+      line-height: var(--line-height-body);
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+    .about-details {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 1.75rem;
+      border: 1px solid var(--divider);
+    }
+    .detail-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--divider);
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .detail-text { font-size: 0.875rem; color: var(--muted); line-height: 1.55; }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* ── EXPERTISE ── */
+    #expertise { background: var(--surface); }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .skill-card {
+      background: var(--bg);
+      border: 1px solid var(--divider);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .skill-card:hover { box-shadow: 0 4px 20px rgba(15,22,36,0.08); transform: translateY(-2px); }
+    .skill-icon { font-size: 1.4rem; margin-bottom: 0.65rem; }
+    .skill-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+      font-family: var(--font-display);
+    }
+    .skill-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
+    @media (max-width: 768px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .skills-grid { grid-template-columns: 1fr; } }
+
+    /* ── CAREER ── */
+    #experience { background: var(--bg); }
+    .timeline { position: relative; padding-left: 1.5rem; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--divider);
+    }
+    .timeline-entry {
+      position: relative;
+      padding-left: 1.75rem;
+      padding-bottom: 2.5rem;
+    }
+    .timeline-entry:last-child { padding-bottom: 0; }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -1.9rem;
+      top: 0.35rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--cta);
+      border: 2px solid var(--bg);
+    }
+    .timeline-entry.demoted::before { background: var(--muted); }
+    .entry-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .entry-company {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--accent);
+      font-family: var(--font-display);
+    }
+    .timeline-entry.demoted .entry-company { font-size: 0.9rem; color: var(--muted); }
+    .entry-date { font-size: 0.8rem; color: var(--muted); font-family: var(--font-mono); }
+    .entry-location { font-size: 0.8rem; color: var(--muted); }
+    .entry-role { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+    .timeline-entry.demoted .entry-role { font-size: 0.875rem; color: var(--muted); font-weight: 500; }
+    .entry-note { font-size: 0.8rem; color: var(--muted); font-style: italic; margin-bottom: 0.5rem; }
+    .entry-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+    .chip {
+      background: var(--tint);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+    }
+    .timeline-entry.demoted .chip { background: #f1f5f9; color: var(--muted); }
+    .entry-impact { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+    .timeline-entry.demoted .entry-impact { font-size: 0.83rem; }
+
+    /* ── CASE STUDIES ── */
+    #case-studies { background: var(--surface); padding-bottom: 0; }
+    .project-block { border-top: 1px solid var(--divider); margin-top: 1rem; }
+    .project-header { padding: 3rem 0; background: var(--accent); }
+    .project-header.light-bg { background: var(--bg); }
+    .project-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.5rem;
+    }
+    .project-header.light-bg .project-eyebrow { color: var(--cta); }
+    .project-title {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      font-family: var(--font-display);
+    }
+    .project-header.light-bg .project-title { color: var(--accent); }
+    .project-intro {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 720px;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .project-header.light-bg .project-intro { color: var(--muted); }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .project-tag {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+    }
+    .project-header.light-bg .project-tag { background: var(--tint); color: var(--accent); }
+
+    /* ── CHAPTERS ── */
+    .chapter { border-bottom: 1px solid var(--divider); }
+    .ch-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-body);
+      transition: background 0.15s;
+    }
+    .ch-toggle:hover { background: var(--bg); }
+    .ch-toggle-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: var(--font-display);
+      padding-right: 1rem;
+    }
+    .ch-arrow { font-size: 0.85rem; color: var(--muted); transition: transform 0.25s; flex-shrink: 0; }
+    .chapter.open .ch-arrow { transform: rotate(180deg); }
+    .ch-body { display: none; padding-bottom: 2rem; }
+    .chapter.open .ch-body { display: block; }
+
+    /* ── IMAGES ── */
+    .img-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .img-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .img-2col-contain {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .img-landscape {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      display: block;
+      background: var(--divider);
+    }
+    .img-portrait-45 {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      display: block;
+      background: var(--divider);
+    }
+    .img-portrait-34 {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      display: block;
+      background: var(--divider);
+    }
+    .img-fullwidth {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      display: block;
+      background: var(--divider);
+      margin: 1.5rem 0;
+    }
+    .img-contain {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 8px;
+      display: block;
+      background: #fff;
+      border: 1px solid var(--divider);
+    }
+    .img-contain-fullwidth {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 8px;
+      display: block;
+      background: #fff;
+      border: 1px solid var(--divider);
+      margin: 1.5rem 0;
+    }
+    figure { margin: 0; }
+    figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; text-align: center; }
+    @media (max-width: 640px) {
+      .img-2col, .img-3col, .img-2col-contain { grid-template-columns: 1fr; }
+    }
+
+    /* ── CONTENT BLOCKS ── */
+    .block-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cta);
+      margin: 1.75rem 0 0.6rem;
+    }
+    .bg-block {
+      background: var(--tint);
+      border-left: 3px solid var(--cta);
+      border-radius: 0 8px 8px 0;
+      padding: 1.1rem 1.4rem;
+      margin: 1.25rem 0;
+    }
+    .bg-block p { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
+
+    .actions-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .action-item {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+    }
+    .action-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+      font-family: var(--font-display);
+    }
+    .action-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
+
+    /* Results as bullets */
+    .results-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-top: 0.5rem;
+    }
+    .results-list li {
+      font-size: 0.9rem;
+      color: var(--text);
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.55;
+    }
+    .results-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--cta);
+      font-weight: 700;
+    }
+
+    /* Results as metric cards (Shopify only) */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .result-card {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: 10px;
+      padding: 1.1rem 1rem;
+      text-align: center;
+    }
+    .result-num {
+      font-family: var(--font-mono);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .result-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+
+    .reflection-block {
+      background: var(--bg);
+      border: 1px solid var(--divider);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .reflection-block p { font-size: 0.9rem; color: var(--text); line-height: 1.75; }
+
+    /* ── PRESS ── */
+    .press-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 0.5rem; }
+    .press-col { display: flex; flex-direction: column; gap: 0.75rem; }
+    .press-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      width: fit-content;
+    }
+    @media (max-width: 640px) { .press-grid { grid-template-columns: 1fr; } }
+
+    /* ── PRODUCT SPEC ── */
+    .product-spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .spec-item {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+    }
+    .spec-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    .spec-value { font-size: 0.875rem; font-weight: 600; color: var(--text); }
+    @media (max-width: 640px) { .product-spec-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* ── SUB LABEL ── */
+    .sub-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    /* ── SCROLLABLE FRAMES ── */
+    .comparison-frames {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .cf-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .cf-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--surface);
+      background: rgba(0,0,0,0.55);
+      padding: 3px 10px;
+      border-radius: 4px;
+      align-self: flex-start;
+    }
+    .cf-scroll {
+      height: 70vh;
+      min-height: 400px;
+      overflow-y: scroll;
+      border-radius: 10px;
+      border: 1px solid var(--divider);
+      background: #fff;
+    }
+    .cf-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .cf-scroll::-webkit-scrollbar { width: 4px; }
+    .cf-scroll::-webkit-scrollbar-track { background: transparent; }
+    .cf-scroll::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 2px; }
+    .comparison-sublabel {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    @media (max-width: 767px) {
+      .comparison-frames { grid-template-columns: 1fr; }
+      .cf-scroll { height: 60vh; }
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--bg); }
+    .contact-inner { max-width: 640px; }
+    .contact-links { display: flex; flex-direction: column; gap: 0.85rem; margin: 2rem 0; }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .contact-link:hover { color: var(--cta); }
+    .contact-icon { font-size: 1.1rem; width: 24px; text-align: center; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--accent);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 1.75rem 2rem;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" data-kr="고윤지" data-en="Eunice Koh">고윤지</a>
+    <ul class="nav-links">
+      <li><a href="#about" data-kr="소개" data-en="About">소개</a></li>
+      <li><a href="#experience" data-kr="경력" data-en="Career">경력</a></li>
+      <li><a href="#case-studies" data-kr="프로젝트" data-en="Work">프로젝트</a></li>
+      <li><a href="#contact" data-kr="연락처" data-en="Contact">연락처</a></li>
+      <li><button id="lang-btn" aria-label="Switch to English">EN</button></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#about" data-kr="소개" data-en="About">소개</a>
+    <a href="#experience" data-kr="경력" data-en="Career">경력</a>
+    <a href="#case-studies" data-kr="프로젝트" data-en="Work">프로젝트</a>
+    <a href="#contact" data-kr="연락처" data-en="Contact">연락처</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="fade-in">
+        <img
+          class="hero-photo"
+          src="고윤지_PORTFOLIO/IMG_1125.png"
+          alt="고윤지 프로필 사진"
+          onerror="this.style.minHeight='320px';this.removeAttribute('src')"
+        >
+      </div>
+      <div class="hero-right fade-in">
+        <h1 data-kr="고윤지" data-en="Eunice Yunjee Koh">고윤지</h1>
+        <p class="hero-subtitle" data-kr="글로벌 마케터" data-en="Global Marketer">글로벌 마케터</p>
+        <div class="hero-tags">
+          <span class="hero-tag" data-kr="글로벌 마케팅 2년+" data-en="2+ Years Global Marketing">글로벌 마케팅 2년+</span>
+          <span class="hero-tag" data-kr="CPG" data-en="CPG">CPG</span>
+          <span class="hero-tag" data-kr="K-뷰티" data-en="K-Beauty">K-뷰티</span>
+          <span class="hero-tag" data-kr="미국 출신" data-en="U.S.-Born">미국 출신</span>
+        </div>
+        <div class="hero-traits">
+          <span class="hero-trait" data-kr="미국 시장 0→1 론칭 경험" data-en="U.S. market 0→1 launch experience">미국 시장 0→1 론칭 경험</span>
+          <span class="hero-trait" data-kr="미국 현지 소비자 인사이트 보유" data-en="On-the-ground U.S. consumer insight">미국 현지 소비자 인사이트 보유</span>
+          <span class="hero-trait" data-kr="데이터 기반 문제 정의 및 실행" data-en="Data-driven problem definition and execution">데이터 기반 문제 정의 및 실행</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#case-studies" class="btn-primary" data-kr="프로젝트 보기" data-en="View Work">프로젝트 보기</a>
+          <a href="#contact" class="btn-secondary" data-kr="연락처" data-en="Contact">연락처</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid fade-in">
+      <div class="about-body">
+        <h2 class="about-headline" data-kr="글로벌 소비재 브랜드의 미국 시장 진출을 0부터 직접 만들었습니다." data-en="Built a global consumer brand's U.S. market entry from zero.">글로벌 소비재 브랜드의 미국 시장 진출을 0부터 직접 만들었습니다.</h2>
+        <p data-kr="글로벌 소비재 브랜드의 해외 시장 진출에 대한 깊은 관심을 바탕으로, 미국 시장을 대상으로 한 마케팅 전략을 직접 수립하고 실행해왔습니다." data-en="I've built my career around taking Korean consumer brands into the U.S. market, working directly from Korean headquarters.">글로벌 소비재 브랜드의 해외 시장 진출에 대한 깊은 관심을 바탕으로, 미국 시장을 대상으로 한 마케팅 전략을 직접 수립하고 실행해왔습니다.</p>
+        <p data-kr="이그니스(EGNIS) 음료사업본부에서는 최초 글로벌 마케팅 담당자로 합류해, 신규 브랜드 HYDROBAE의 미국 시장 진출 전략을 처음부터 끝까지 단독으로 설계하고 실행했습니다. AXIS-Y에서는 북미 타겟 인플루언서 200명 이상과 협업하며 캠페인을 기획하고 운영했습니다." data-en="At EGNIS Beverage Division, I joined as the first global marketing hire and built the full U.S. market entry strategy for HYDROBAE from scratch. At AXIS-Y, I planned and managed influencer campaigns across North America, collaborating with 200+ creators.">이그니스(EGNIS) 음료사업본부에서는 최초 글로벌 마케팅 담당자로 합류해, 신규 브랜드 HYDROBAE의 미국 시장 진출 전략을 처음부터 끝까지 단독으로 설계하고 실행했습니다. AXIS-Y에서는 북미 타겟 인플루언서 200명 이상과 협업하며 캠페인을 기획하고 운영했습니다.</p>
+        <p data-kr="데이터를 기반으로 문제를 정의하고, 전략 기획부터 광고 운영, 인플루언서 협업, 이커머스 운영까지 직접 실행하는 마케터입니다." data-en="I define problems through data, then execute end-to-end: strategy, paid media, influencer ops, and e-commerce.">데이터를 기반으로 문제를 정의하고, 전략 기획부터 광고 운영, 인플루언서 협업, 이커머스 운영까지 직접 실행하는 마케터입니다.</p>
+      </div>
+      <div class="about-details">
+        <div class="detail-row">
+          <span class="detail-icon">📍</span>
+          <span class="detail-text" data-kr="경기도 성남시 분당구 거주 (미국 시민권, F-4 재외동포 비자)" data-en="Bundang, Gyeonggi-do, South Korea (U.S. Citizen, F-4 Visa)">경기도 성남시 분당구 거주 (미국 시민권, F-4 재외동포 비자)</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-icon">🎓</span>
+          <span class="detail-text" data-kr="오하이오주립대 (Ohio State University) 약학과 학사 졸업 (2014.08 – 2018.05)" data-en="B.S. Pharmaceutical Sciences, Ohio State University (Aug 2014 – May 2018)">오하이오주립대 (Ohio State University) 약학과 학사 졸업 (2014.08 – 2018.05)</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-icon">🌐</span>
+          <span class="detail-text" data-kr="영어 (Native) · 한국어 (Fluent)" data-en="English (Native) · Korean (Fluent)">영어 (Native) · 한국어 (Fluent)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="container">
+    <div class="section-label" data-kr="주요 역량" data-en="Core Competencies">주요 역량</div>
+    <h2 class="section-title" data-kr="주요 역량" data-en="Core Competencies">주요 역량</h2>
+    <div class="skills-grid">
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🚀</div>
+        <div class="skill-title" data-kr="GTM 전략" data-en="GTM Strategy">GTM 전략</div>
+        <div class="skill-desc" data-kr="시장 진입 전략 수립, P&amp;L 모델링, 채널 선정, 사업 로드맵 설계" data-en="Market entry strategy, P&amp;L modeling, channel selection, business roadmap design">시장 진입 전략 수립, P&amp;L 모델링, 채널 선정, 사업 로드맵 설계</div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-icon">📊</div>
+        <div class="skill-title" data-kr="퍼포먼스 마케팅" data-en="Performance Marketing">퍼포먼스 마케팅</div>
+        <div class="skill-desc" data-kr="Meta Ads, Amazon PPC, A/B 테스트 프레임워크, 데이터 기반 크리에이티브 최적화" data-en="Meta Ads, Amazon PPC, A/B testing frameworks, data-driven creative optimization">Meta Ads, Amazon PPC, A/B 테스트 프레임워크, 데이터 기반 크리에이티브 최적화</div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🤝</div>
+        <div class="skill-title" data-kr="인플루언서 마케팅" data-en="Influencer Marketing">인플루언서 마케팅</div>
+        <div class="skill-desc" data-kr="CRM 구축, 크리에이터 소싱·아웃리치, 캠페인 기획·운영, 콘텐츠 훅 전략" data-en="CRM build, creator sourcing &amp; outreach, campaign management, content hook strategy">CRM 구축, 크리에이터 소싱·아웃리치, 캠페인 기획·운영, 콘텐츠 훅 전략</div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🛒</div>
+        <div class="skill-title" data-kr="이커머스" data-en="E-commerce">이커머스</div>
+        <div class="skill-desc" data-kr="Amazon 브랜드스토어·PDP, Shopify, A+ 콘텐츠, FBA/3PL 운영" data-en="Amazon Brand Store &amp; PDP, Shopify, A+ content, FBA/3PL operations">Amazon 브랜드스토어·PDP, Shopify, A+ 콘텐츠, FBA/3PL 운영</div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🎪</div>
+        <div class="skill-title" data-kr="브랜드 마케팅" data-en="Brand Marketing">브랜드 마케팅</div>
+        <div class="skill-desc" data-kr="오프라인 이벤트 기획·실행, PR, 브랜드 콘텐츠 가이드, 크리에이티브 디렉팅" data-en="Offline event planning &amp; execution, PR, brand content guides, creative direction">오프라인 이벤트 기획·실행, PR, 브랜드 콘텐츠 가이드, 크리에이티브 디렉팅</div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-icon">📋</div>
+        <div class="skill-title" data-kr="수출·컴플라이언스" data-en="Export &amp; Compliance">수출·컴플라이언스</div>
+        <div class="skill-desc" data-kr="FDA 라벨링, FSVP/SID, 통관 서류(CIPL, 선하증권), 3PL 계약, 내부 SOP" data-en="FDA labeling, FSVP/SID, customs docs (CIPL, Bill of Lading), 3PL contracts, SOPs">FDA 라벨링, FSVP/SID, 통관 서류(CIPL, 선하증권), 3PL 계약, 내부 SOP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label" data-kr="경력" data-en="Career">경력</div>
+    <h2 class="section-title" data-kr="경력" data-en="Career">경력</h2>
+    <div class="timeline">
+
+      <!-- EGNIS -->
+      <div class="timeline-entry fade-in">
+        <div class="entry-meta">
+          <span class="entry-company" data-kr="(주)이그니스 음료사업본부" data-en="EGNIS Beverage Division">(주)이그니스 음료사업본부</span>
+          <span class="entry-date" data-kr="2024.11 – 현재" data-en="November 2024 – Present">2024.11 – 현재</span>
+          <span class="entry-location" data-kr="· 서울" data-en="· Seoul">· 서울</span>
+        </div>
+        <div class="entry-role" data-kr="글로벌 마케팅 파트장" data-en="Global Marketing Team Lead">글로벌 마케팅 파트장</div>
+        <div class="entry-chips">
+          <span class="chip">CPG</span>
+          <span class="chip" data-kr="신사업" data-en="New Business">신사업</span>
+          <span class="chip" data-kr="미국 시장 진출" data-en="U.S. Market Entry">미국 시장 진출</span>
+          <span class="chip">Amazon</span>
+        </div>
+        <div class="entry-impact" data-kr="음료사업본부 최초 글로벌 마케팅 담당자. 신사업 미국 시장 진출 전 과정 단독 설계 및 실행." data-en="First global marketing hire for new business initiative. Designed and executed full U.S. market entry strategy.">음료사업본부 최초 글로벌 마케팅 담당자. 신사업 미국 시장 진출 전 과정 단독 설계 및 실행.</div>
+      </div>
+
+      <!-- AXIS-Y -->
+      <div class="timeline-entry fade-in">
+        <div class="entry-meta">
+          <span class="entry-company" data-kr="AXIS-Y (아시아마스터트레이드)" data-en="AXIS-Y (Asia Master Trade)">AXIS-Y (아시아마스터트레이드)</span>
+          <span class="entry-date" data-kr="2024.01 – 2024.10" data-en="January 2024 – October 2024">2024.01 – 2024.10</span>
+          <span class="entry-location" data-kr="· 서울" data-en="· Seoul">· 서울</span>
+        </div>
+        <div class="entry-role" data-kr="글로벌 마케팅" data-en="Global Marketing Specialist">글로벌 마케팅</div>
+        <div class="entry-note" data-kr="콘텐츠 마케팅 인턴 입사 후 정규직 전환 (3월)" data-en="Started as Content Marketing Intern (Jan–Feb), converted to full-time (Mar)">콘텐츠 마케팅 인턴 입사 후 정규직 전환 (3월)</div>
+        <div class="entry-chips">
+          <span class="chip" data-kr="K-뷰티" data-en="K-Beauty">K-뷰티</span>
+          <span class="chip" data-kr="인플루언서" data-en="Influencer">인플루언서</span>
+          <span class="chip">Shopify</span>
+          <span class="chip" data-kr="이벤트" data-en="Events">이벤트</span>
+        </div>
+        <div class="entry-impact" data-kr="북미 인플루언서 200명 이상 협업·관리. Shopify 전면 리뉴얼, 브랜드 이벤트 3회 총괄 관리 및 실행." data-en="200+ influencer campaigns. Full Shopify revamp. 3 brand events across Seoul and Jeju.">북미 인플루언서 200명 이상 협업·관리. Shopify 전면 리뉴얼, 브랜드 이벤트 3회 총괄 관리 및 실행.</div>
+      </div>
+
+      <!-- Akademia — visually demoted -->
+      <div class="timeline-entry demoted fade-in">
+        <div class="entry-meta">
+          <span class="entry-company" data-kr="아카데미아 어학원" data-en="Akademia Language Institute">아카데미아 어학원</span>
+          <span class="entry-date" data-kr="2020.06 – 2024.02" data-en="June 2020 – February 2024">2020.06 – 2024.02</span>
+          <span class="entry-location" data-kr="· 경기 성남 분당" data-en="· Bundang, Korea">· 경기 성남 분당</span>
+        </div>
+        <div class="entry-role" data-kr="R&amp;D 프로젝트 코디네이터 / 영어강사" data-en="R&amp;D Project Coordinator + English Instructor">R&amp;D 프로젝트 코디네이터 / 영어강사</div>
+        <div class="entry-impact" data-kr="맞춤형 교재 15종 자체 개발. SAT 영어 강의 담당." data-en="Authored 15 custom curriculum books. Led SAT English courses.">맞춤형 교재 15종 자체 개발. SAT 영어 강의 담당.</div>
+      </div>
+
+      <!-- Ohio State -->
+      <div class="timeline-entry demoted fade-in">
+        <div class="entry-meta">
+          <span class="entry-company" data-kr="오하이오주립대학교" data-en="The Ohio State University">오하이오주립대학교</span>
+          <span class="entry-date">2014 – 2018</span>
+          <span class="entry-location" data-kr="· 미국 오하이오주 콜럼버스" data-en="· Columbus, Ohio">· 미국 오하이오주 콜럼버스</span>
+        </div>
+        <div class="entry-role" data-kr="약학과 학사" data-en="B.S. Pharmaceutical Sciences">약학과 학사</div>
+        <div class="entry-note" data-kr="+ 연세대학교 국제하계학교 (2017)" data-en="+ International Summer School, Yonsei University (2017)">+ 연세대학교 국제하계학교 (2017)</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="container">
+    <div class="section-label" data-kr="주요 프로젝트" data-en="Featured Work">주요 프로젝트</div>
+    <h2 class="section-title" data-kr="프로젝트 전체 보기" data-en="The Work, In Full">프로젝트 전체 보기</h2>
+  </div>
+
+  <!-- ═══ PROJECT 1: HYDROBAE ═══ -->
+  <div class="project-block">
+    <div class="project-header">
+      <div class="container">
+        <div class="project-eyebrow" data-kr="프로젝트 1 · 이그니스 음료사업본부 · 2024–현재" data-en="Project 1 · EGNIS Beverage Division · 2024–Present">프로젝트 1 · 이그니스 음료사업본부 · 2024–현재</div>
+        <h2 class="project-title" data-kr="HYDROBAE 미국 시장 진출 프로젝트" data-en="HYDROBAE U.S. Market Entry">HYDROBAE 미국 시장 진출 프로젝트</h2>
+        <p class="project-intro" data-kr="이그니스 음료사업본부의 신사업인 미국 시장 진출 프로젝트를 단독으로 담당했습니다. GTM 전략 수립부터 아마존 채널 구축, 광고 운영, 인플루언서 시스템 설계까지 에이전시 없이 처음부터 직접 만들었습니다." data-en="Led the full U.S. market entry for EGNIS Beverage Division's new business initiative. GTM strategy, Amazon launch, Meta Ads, influencer program. No agency, no team, built from zero.">이그니스 음료사업본부의 신사업인 미국 시장 진출 프로젝트를 단독으로 담당했습니다. GTM 전략 수립부터 아마존 채널 구축, 광고 운영, 인플루언서 시스템 설계까지 에이전시 없이 처음부터 직접 만들었습니다.</p>
+        <div class="project-tags">
+          <span class="project-tag">GTM Strategy</span>
+          <span class="project-tag">Product Development</span>
+          <span class="project-tag">Amazon</span>
+          <span class="project-tag">Meta Ads</span>
+          <span class="project-tag">Influencer</span>
+          <span class="project-tag">Export</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HB Ch1 -->
+    <div class="chapter open" id="hb1">
+      <div class="container">
+        <button class="ch-toggle" onclick="toggleCh('hb1')">
+          <span class="ch-toggle-title" data-kr="Ch.1 제품 개발 및 GTM 전략" data-en="Ch.1 Product Development &amp; GTM Strategy">Ch.1 제품 개발 및 GTM 전략</span>
+          <span class="ch-arrow">▼</span>
+        </button>
+        <div class="ch-body">
+          <div class="img-2col">
+            <figure>
+              <img class="img-landscape"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE)/촬영 수정본/251208_클룹_하이드로배0135.jpg"
+                alt="HYDROBAE 위켄드 포뮬러. 14개입 · 30개입"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="HYDROBAE 위켄드 포뮬러. 14개입 · 30개입" data-en="HYDROBAE Weekend Formula. 14-stick and 30-stick">HYDROBAE 위켄드 포뮬러. 14개입 · 30개입</figcaption>
+            </figure>
+            <figure>
+              <img class="img-landscape"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE)/촬영 수정본/251208_클룹_하이드로배_Capture_665.jpg"
+                alt="HYDROBAE 스틱팩. 단일 제공량"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="HYDROBAE 스틱팩. 단일 제공량" data-en="HYDROBAE Stick Pack. Single Serve">HYDROBAE 스틱팩. 단일 제공량</figcaption>
+            </figure>
+          </div>
+
+          <div class="product-spec-grid">
+            <div class="spec-item">
+              <div class="spec-label" data-kr="제품" data-en="Product">제품</div>
+              <div class="spec-value">HYDROBAE Weekend Formula</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-label" data-kr="포맷" data-en="Format">포맷</div>
+              <div class="spec-value" data-kr="파우더 스틱팩 (14개입 / 30개입)" data-en="Powder Stick Pack (14ct / 30ct)">파우더 스틱팩 (14개입 / 30개입)</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-label" data-kr="핵심 차별점" data-en="Key Differentiator">핵심 차별점</div>
+              <div class="spec-value" data-kr="제로슈가, 한국산 배 추출물, L-Theanine + 생강" data-en="Zero sugar, Korean Pear extract, L-Theanine + Ginger">제로슈가, 한국산 배 추출물, L-Theanine + 생강</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-label" data-kr="주요 성분" data-en="Hero Ingredient">주요 성분</div>
+              <div class="spec-value" data-kr="Korean Pear Extract, 이온, L-Theanine, Ginger" data-en="Korean Pear Extract, Electrolytes, L-Theanine, Ginger">Korean Pear Extract, 이온, L-Theanine, Ginger</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-label" data-kr="모회사" data-en="Parent Brand">모회사</div>
+              <div class="spec-value" data-kr="(주)이그니스 음료사업본부" data-en="EGNIS Beverage Division">(주)이그니스 음료사업본부</div>
+            </div>
+          </div>
+
+          <div class="bg-block">
+            <p data-kr="한국 음료 브랜드의 미국 온라인 시장 진출에는 구조적 어려움이 있음. RTD(즉석 음료) 제품은 원가 부담이 높고, 가격 설정에 제약이 있으며, 배송 중량과 수출 비용까지 더해져 초기 마진 확보가 어려움. 미국의 주요 음료 브랜드들은 이 문제를 해결하기 위해 파우더 포맷을 온라인 채널 전략으로 채택함. HYDROBAE는 처음부터 이 구조를 반영해 파우더 스틱팩 포맷으로 설계함. 배송 중량 절감과 MSRP 상향 설정이 가능해 기여마진 확보가 가능한 구조임. Liquid IV, LMNT 등 미국 카테고리 선도 브랜드들이 이미 검증한 전략이기도 함." data-en="Korean beverage brands face a structural margin problem entering the U.S. online market. RTD products carry high COGS, limited pricing power, heavy shipping weight, and export costs that make early-stage margins difficult. Many leading U.S. beverage brands solved this by adopting powder formats for their online channel strategy. HYDROBAE was designed from day one with this structure in mind: powder stick pack format enables lower shipping costs, higher MSRP ceiling, and viable contribution margins at launch. The same approach proven by Liquid IV, LMNT, and other U.S. category leaders.">한국 음료 브랜드의 미국 온라인 시장 진출에는 구조적 어려움이 있음. RTD(즉석 음료) 제품은 원가 부담이 높고, 가격 설정에 제약이 있으며, 배송 중량과 수출 비용까지 더해져 초기 마진 확보가 어려움. 미국의 주요 음료 브랜드들은 이 문제를 해결하기 위해 파우더 포맷을 온라인 채널 전략으로 채택함. HYDROBAE는 처음부터 이 구조를 반영해 파우더 스틱팩 포맷으로 설계함. 배송 중량 절감과 MSRP 상향 설정이 가능해 기여마진 확보가 가능한 구조임. Liquid IV, LMNT 등 미국 카테고리 선도 브랜드들이 이미 검증한 전략이기도 함.</p>
+          </div>
+
+          <div class="block-label" data-kr="실행" data-en="Actions">실행</div>
+          <ul class="actions-list">
+            <li class="action-item">
+              <div class="action-title" data-kr="GTM 전략 수립" data-en="GTM Strategy">GTM 전략 수립</div>
+              <div class="action-desc" data-kr="B2B 바이어, 수출 구조, 아마존 B2C 세 경로를 P&amp;L 기준으로 직접 비교 분석. 아마존 B2C 전략을 경영진에 제안, 사업 로드맵으로 채택." data-en="Compared 3 entry paths (B2B import, export buyer, Amazon B2C) with full P&amp;L models. Proposed Amazon B2C to C-suite. Adopted as the business roadmap.">B2B 바이어, 수출 구조, 아마존 B2C 세 경로를 P&amp;L 기준으로 직접 비교 분석. 아마존 B2C 전략을 경영진에 제안, 사업 로드맵으로 채택.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="제품 포뮬레이션 주도" data-en="Product Formulation">제품 포뮬레이션 주도</div>
+              <div class="action-desc" data-kr="경쟁사 이온 음료·수분 보충 제품 20개+ 원료 단위 벤치마킹. 핵심 발견 3가지로 최종 포뮬레이션 결정: 제로슈가(전환율 1위 드라이버), Korean Pear 배 추출물(기능성 차별점, 경쟁사 대비 가격·이온 함량 모두 우위), L-Theanine+생강(회복 효과 설계). 제조사 R&amp;D팀과 풍미 테스트 진행." data-en="Benchmarked 20+ competitor formulations at ingredient level. Three decisions shaped the product: zero sugar (#1 conversion driver), Korean Pear extract (functional differentiator, better value vs. competitors on both price and electrolyte content), L-Theanine + Ginger for recovery. Coordinated flavor testing with manufacturer R&amp;D.">경쟁사 이온 음료·수분 보충 제품 20개+ 원료 단위 벤치마킹. 핵심 발견 3가지로 최종 포뮬레이션 결정: 제로슈가(전환율 1위 드라이버), Korean Pear 배 추출물(기능성 차별점, 경쟁사 대비 가격·이온 함량 모두 우위), L-Theanine+생강(회복 효과 설계). 제조사 R&amp;D팀과 풍미 테스트 진행.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="아마존 채널 구축" data-en="Amazon Build">아마존 채널 구축</div>
+              <div class="action-desc" data-kr="브랜드스토어 및 전체 PDP 직접 구축. 리스팅 카피 작성 (199자 타이틀, 불릿, 백엔드 키워드). A+ 콘텐츠 기획 및 제작. FBA+3PL 이중 재고 시스템 설계." data-en="Built full Brand Store and all PDPs. Wrote all listing copy (199-char title, bullets, backend keywords). Planned and created A+ content. Designed FBA + 3PL split inventory system.">브랜드스토어 및 전체 PDP 직접 구축. 리스팅 카피 작성 (199자 타이틀, 불릿, 백엔드 키워드). A+ 콘텐츠 기획 및 제작. FBA+3PL 이중 재고 시스템 설계.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="Helium 10 / 아마존 PPC" data-en="Helium 10 / Amazon PPC">Helium 10 / 아마존 PPC</div>
+              <div class="action-desc" data-kr="Helium 10 AI 자동화 도입. 스폰서드 프로덕트 캠페인 구조 설계. CPC 55% 절감: $4.09 → $1.85." data-en="Helium 10 AI-assisted automation. Structured Sponsored Products campaigns. Result: 55% CPC reduction, $4.09 → $1.85.">Helium 10 AI 자동화 도입. 스폰서드 프로덕트 캠페인 구조 설계. CPC 55% 절감: $4.09 → $1.85.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="수출 인프라 및 컴플라이언스" data-en="Export &amp; Compliance">수출 인프라 및 컴플라이언스</div>
+              <div class="action-desc" data-kr="FDA 라벨링 규정 구축. FSVP/SID 요건 관리. 3PL 계약, 통관 서류(CIPL, 선하증권), 내부 SOP 설계." data-en="Built FDA labeling compliance. FSVP/SID management. 3PL contract, customs docs (CIPL, Bill of Lading), internal SOPs.">FDA 라벨링 규정 구축. FSVP/SID 요건 관리. 3PL 계약, 통관 서류(CIPL, 선하증권), 내부 SOP 설계.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="언론 홍보" data-en="Press">언론 홍보</div>
+              <div class="action-desc" data-kr="PR 에이전시 없이 BevNet, TrendHunter 브랜드 노출 확보." data-en="Secured coverage in BevNet and TrendHunter. No PR agency.">PR 에이전시 없이 BevNet, TrendHunter 브랜드 노출 확보.</div>
+            </li>
+          </ul>
+
+          <!-- Press -->
+          <div class="block-label" data-kr="미디어 커버리지" data-en="Press Coverage">미디어 커버리지</div>
+          <div class="press-grid">
+            <div class="press-col">
+              <figure>
+                <img class="img-landscape"
+                  src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (PR ARTICLES/bevnet article.png"
+                  alt="BevNet Coverage"
+                  onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+                <figcaption data-kr="BevNet 브랜드 노출" data-en="BevNet Coverage">BevNet 브랜드 노출</figcaption>
+              </figure>
+              <span class="press-badge">BevNet</span>
+            </div>
+            <div class="press-col">
+              <figure>
+                <img class="img-landscape" style="object-position: top;"
+                  src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (PR ARTICLES/trendhunter article.png"
+                  alt="TrendHunter Brand Feature"
+                  onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+                <figcaption data-kr="TrendHunter 브랜드 피처" data-en="TrendHunter Brand Feature">TrendHunter 브랜드 피처</figcaption>
+              </figure>
+              <span class="press-badge">TrendHunter</span>
+            </div>
+          </div>
+
+          <!-- Amazon A+ -->
+          <div class="block-label" data-kr="아마존 A+ 콘텐츠" data-en="Amazon A+ Content">아마존 A+ 콘텐츠</div>
+          <div class="img-2col-contain">
+            <figure>
+              <img class="img-contain"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE_AMAZON)/hydrobae_competitor comparison.png"
+                alt="A+ 콘텐츠: 경쟁사 비교 섹션"
+                onerror="this.style.background='#fff';this.removeAttribute('src')">
+              <figcaption data-kr="A+ 콘텐츠: 경쟁사 비교 섹션" data-en="A+ Content: Competitive Comparison">A+ 콘텐츠: 경쟁사 비교 섹션</figcaption>
+            </figure>
+            <figure>
+              <img class="img-contain"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE_AMAZON)/korean pear clinical test.png"
+                alt="A+ 콘텐츠: 배 추출물 임상 데이터"
+                onerror="this.style.background='#fff';this.removeAttribute('src')">
+              <figcaption data-kr="A+ 콘텐츠: 배 추출물 임상 데이터" data-en="A+ Content: Korean Pear Clinical Data">A+ 콘텐츠: 배 추출물 임상 데이터</figcaption>
+            </figure>
+          </div>
+
+          <!-- Project Timeline Management -->
+          <div class="block-label" data-kr="프로젝트 타임라인 관리" data-en="Project Timeline Management">프로젝트 타임라인 관리</div>
+          <div class="img-3col">
+            <figure>
+              <img class="img-contain"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE_PROJECT TIMELINE MANAGEMENT)/marketing GTM strategy.png"
+                alt="GTM 전략 로드맵"
+                onerror="this.style.background='#fff';this.removeAttribute('src')">
+              <figcaption data-kr="GTM 전략 로드맵" data-en="GTM Strategy Roadmap">GTM 전략 로드맵</figcaption>
+            </figure>
+            <figure>
+              <img class="img-contain"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE_PROJECT TIMELINE MANAGEMENT)/Media Mix Budgeting.png"
+                alt="미디어 믹스 예산 계획"
+                onerror="this.style.background='#fff';this.removeAttribute('src')">
+              <figcaption data-kr="미디어 믹스 예산 계획" data-en="Media Mix Budgeting">미디어 믹스 예산 계획</figcaption>
+            </figure>
+            <figure>
+              <img class="img-contain"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE_PROJECT TIMELINE MANAGEMENT)/product development timeline_todo.png"
+                alt="제품 개발 타임라인"
+                onerror="this.style.background='#fff';this.removeAttribute('src')">
+              <figcaption data-kr="제품 개발 타임라인" data-en="Product Development Timeline">제품 개발 타임라인</figcaption>
+            </figure>
+          </div>
+
+          <div class="block-label" data-kr="성과" data-en="Results">성과</div>
+          <ul class="results-list">
+            <li data-kr="음료사업본부 최초 글로벌 마케팅 전담. 신사업 미국 시장 진출 전 과정 단독 설계·실행" data-en="First global marketing hire. Designed and executed full U.S. market entry for new business initiative solo">음료사업본부 최초 글로벌 마케팅 전담. 신사업 미국 시장 진출 전 과정 단독 설계·실행</li>
+            <li data-kr="경쟁사 20개+ 포뮬레이션 벤치마킹 기반 제품 개발" data-en="Product developed from 20+ competitor formulation benchmarks">경쟁사 20개+ 포뮬레이션 벤치마킹 기반 제품 개발</li>
+            <li data-kr="아마존 브랜드스토어, PDP, A+ 콘텐츠, FBA/3PL 재고 시스템 구축 완료" data-en="Amazon Brand Store, PDP, A+ content, and FBA/3PL inventory system built">아마존 브랜드스토어, PDP, A+ 콘텐츠, FBA/3PL 재고 시스템 구축 완료</li>
+            <li data-kr="PR 에이전시 없이 BevNet, TrendHunter 미디어 커버리지 확보" data-en="BevNet and TrendHunter media coverage secured without PR agency">PR 에이전시 없이 BevNet, TrendHunter 미디어 커버리지 확보</li>
+          </ul>
+
+          <div class="block-label" data-kr="회고" data-en="Reflection">회고</div>
+          <div class="reflection-block">
+            <p data-kr="특정 시장을 위한 제품을 론칭할 때, 마케팅 전략의 정교함만큼이나 수출 구조와 판매 채널의 안정성이 선행되어야 한다는 점을 체감했습니다. 미국 법인 부재로 인한 채널 제한은 마케팅 실행의 속도와 방향 전환 모두에 직접적인 영향을 미쳤습니다. 제품의 완성도와 마케팅 역량이 준비되어 있더라도, 운영 인프라가 이를 뒷받침하지 못하면 성과의 폭은 구조적으로 제한됩니다." data-en="Launching into a specific market requires more than a sharp strategy. The export structure and sales channel infrastructure have to come first. The absence of a U.S. entity created hard channel limits that directly constrained both speed and strategic flexibility. Even with strong product and execution capability, operational infrastructure is the ceiling on what marketing can achieve.">특정 시장을 위한 제품을 론칭할 때, 마케팅 전략의 정교함만큼이나 수출 구조와 판매 채널의 안정성이 선행되어야 한다는 점을 체감했습니다. 미국 법인 부재로 인한 채널 제한은 마케팅 실행의 속도와 방향 전환 모두에 직접적인 영향을 미쳤습니다. 제품의 완성도와 마케팅 역량이 준비되어 있더라도, 운영 인프라가 이를 뒷받침하지 못하면 성과의 폭은 구조적으로 제한됩니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HB Ch2 -->
+    <div class="chapter" id="hb2">
+      <div class="container">
+        <button class="ch-toggle" onclick="toggleCh('hb2')">
+          <span class="ch-toggle-title" data-kr="Ch.2 메타 광고 시스템 구축. CTR 6–7% 달성" data-en="Ch.2 Meta Ads System. 6–7% CTR">Ch.2 메타 광고 시스템 구축. CTR 6–7% 달성</span>
+          <span class="ch-arrow">▼</span>
+        </button>
+        <div class="ch-body">
+          <figure>
+            <img class="img-fullwidth"
+              src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (META)/eunice_portfolio_meta dashboard.png"
+              alt="메타 광고 매니저. 주요 영상 CTR 6.67%"
+              onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+            <figcaption data-kr="메타 광고 매니저. 주요 영상 CTR 6.67%" data-en="Meta Ads Manager. Primary Video CTR 6.67%">메타 광고 매니저. 주요 영상 CTR 6.67%</figcaption>
+          </figure>
+
+          <div class="bg-block">
+            <p data-kr="미국 내 브랜드 인지도 제로, 에이전시 없는 상황에서 아마존 리스팅으로 트래픽을 유도할 메타 광고 시스템을 처음부터 구축해야 했음." data-en="Zero U.S. brand awareness. No agency. Built a Meta Ads creative system from scratch to drive cold traffic to a new Amazon listing on a lean budget.">미국 내 브랜드 인지도 제로, 에이전시 없는 상황에서 아마존 리스팅으로 트래픽을 유도할 메타 광고 시스템을 처음부터 구축해야 했음.</p>
+          </div>
+
+          <div class="block-label" data-kr="실행" data-en="Actions">실행</div>
+          <ul class="actions-list">
+            <li class="action-item">
+              <div class="action-title" data-kr="경쟁사 크리에이티브 분석" data-en="Competitive Creative Analysis">경쟁사 크리에이티브 분석</div>
+              <div class="action-desc" data-kr="메타·틱톡 광고 라이브러리 체계 분석. 경쟁사 주요 포맷, 메시지 앵글, 비주얼 훅 파악." data-en="Analyzed Meta and TikTok Ads Libraries. Identified winning formats, hooks, and message angles from category competitors.">메타·틱톡 광고 라이브러리 체계 분석. 경쟁사 주요 포맷, 메시지 앵글, 비주얼 훅 파악.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="크리에이티브 테스트 프레임워크" data-en="Testing Framework">크리에이티브 테스트 프레임워크</div>
+              <div class="action-desc" data-kr="콘텐츠 유형 3가지 × 다양한 메시지 앵글. 테스트 주기당 크리에이티브 8–16개 운영." data-en="3 content types × multiple message angles. 8–16 active creatives per test cycle.">콘텐츠 유형 3가지 × 다양한 메시지 앵글. 테스트 주기당 크리에이티브 8–16개 운영.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="크리에이티브 네이밍 시스템 설계" data-en="Creative Naming System">크리에이티브 네이밍 시스템 설계</div>
+              <div class="action-desc" data-kr="크리에이티브 유형·앵글·맥락을 기준으로 체계적인 네이밍 구조를 수립. 어떤 변수가 성과에 영향을 미쳤는지 추적하고, 다음 크리에이티브 방향에 반영할 수 있도록 설계. 에이전시 없이 인하우스 단독 운영." data-en="Built a structured naming system based on creative type, angle, and context. Designed so every creative maps to a hypothesis, making it possible to identify which variables drove performance and inform the next strategic direction. All managed in-house without an agency.">크리에이티브 유형·앵글·맥락을 기준으로 체계적인 네이밍 구조를 수립. 어떤 변수가 성과에 영향을 미쳤는지 추적하고, 다음 크리에이티브 방향에 반영할 수 있도록 설계. 에이전시 없이 인하우스 단독 운영.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="스크립트·비주얼 디렉팅 및 A/B 테스트" data-en="Script, Direction + A/B Testing">스크립트·비주얼 디렉팅 및 A/B 테스트</div>
+              <div class="action-desc" data-kr="모든 광고 스크립트 직접 작성. 훅/오프닝 라인 변형, 비주얼 포맷(토킹헤드 vs. 제품 중심), 연령 타겟(18–44), 지면(IG Feed·릴스·스토리·FB) 기준으로 A/B 테스트 설계·운영. 데이터 기반으로 다음 크리에이티브 방향 재구성." data-en="Wrote all ad scripts. Designed and ran A/B tests across hook/opening line variations, visual format (talking-head vs. product-focused), demographic splits (age 18–44), and placement mix (IG Feed, Reels, Stories, FB). Used results to restructure creative strategy for each test cycle.">모든 광고 스크립트 직접 작성. 훅/오프닝 라인 변형, 비주얼 포맷(토킹헤드 vs. 제품 중심), 연령 타겟(18–44), 지면(IG Feed·릴스·스토리·FB) 기준으로 A/B 테스트 설계·운영. 데이터 기반으로 다음 크리에이티브 방향 재구성.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="아마존 어트리뷰션 세팅" data-en="Amazon Attribution">아마존 어트리뷰션 세팅</div>
+              <div class="action-desc" data-kr="크리에이티브별 어트리뷰션 링크 세팅. 메타 성과와 아마존 전환 데이터 연결." data-en="Set up Attribution links per creative. Built tracking sheet linking Meta CTR to Amazon conversion data.">크리에이티브별 어트리뷰션 링크 세팅. 메타 성과와 아마존 전환 데이터 연결.</div>
+            </li>
+          </ul>
+
+          <div class="block-label" data-kr="성과" data-en="Results">성과</div>
+          <ul class="results-list">
+            <li data-kr="주요 영상 광고 CTR 6–7% 달성 (이커머스 영상 업계 평균 ~1.5%의 약 4배)" data-en="Primary video CTR 6–7% (approximately 4× e-commerce video industry average of ~1.5%)">주요 영상 광고 CTR 6–7% 달성 (이커머스 영상 업계 평균 ~1.5%의 약 4배)</li>
+            <li data-kr="테스트 주기당 크리에이티브 8–16개 운영, A/B 테스트 프레임워크 구축" data-en="8–16 creatives per test cycle, structured A/B testing framework built">테스트 주기당 크리에이티브 8–16개 운영, A/B 테스트 프레임워크 구축</li>
+          </ul>
+
+          <div class="block-label" data-kr="회고" data-en="Reflection">회고</div>
+          <div class="reflection-block">
+            <p data-kr="Meta 광고에서 확인한 CTR과 실제 매출 사이의 인과관계를 데이터로 직접 잇지 못한 것이 가장 큰 제약이었습니다. 판매 채널이 분산될수록 광고 성과의 해석은 불완전해지고, 예산 배분 의사결정의 근거도 흐려집니다. Shopify 등 직접 전환 채널과의 통합을 전제로 광고 구조를 설계했다면, 크리에이티브 최적화 사이클을 훨씬 빠르게 돌릴 수 있었을 것입니다. 또한 현지 트렌드를 실시간으로 반영한 콘텐츠 제작 체계가 전환율에 직접적인 영향을 미친다는 점도 이 경험을 통해 확인했습니다." data-en="The biggest constraint was not being able to directly link Meta ad performance to actual sales through data. Fragmented sales channels make ad performance harder to interpret and weaken the basis for budget decisions. A direct conversion channel like Shopify, integrated from the start, would have allowed a much faster creative optimization cycle. This experience also confirmed that content reflecting real-time local trends has a direct effect on conversion, not just on reach.">Meta 광고에서 확인한 CTR과 실제 매출 사이의 인과관계를 데이터로 직접 잇지 못한 것이 가장 큰 제약이었습니다. 판매 채널이 분산될수록 광고 성과의 해석은 불완전해지고, 예산 배분 의사결정의 근거도 흐려집니다. Shopify 등 직접 전환 채널과의 통합을 전제로 광고 구조를 설계했다면, 크리에이티브 최적화 사이클을 훨씬 빠르게 돌릴 수 있었을 것입니다. 또한 현지 트렌드를 실시간으로 반영한 콘텐츠 제작 체계가 전환율에 직접적인 영향을 미친다는 점도 이 경험을 통해 확인했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HB Ch3 -->
+    <div class="chapter" id="hb3">
+      <div class="container">
+        <button class="ch-toggle" onclick="toggleCh('hb3')">
+          <span class="ch-toggle-title" data-kr="Ch.3 미국 인플루언서 프로그램 구축. 1,300명+ CRM, 첫 2개월" data-en="Ch.3 U.S. Influencer Program. 1,300+ CRM, First 2 Months">Ch.3 미국 인플루언서 프로그램 구축. 1,300명+ CRM, 첫 2개월</span>
+          <span class="ch-arrow">▼</span>
+        </button>
+        <div class="ch-body">
+          <div class="bg-block">
+            <p data-kr="브랜드 인지도, 크리에이터 관계, 유료 인플루언서 예산 모두 없는 상태에서 인플루언서 마케팅 운영 전체를 처음부터 구축함." data-en="No brand presence. No creator relationships. No paid influencer budget. Built the full influencer operation from scratch: sourcing, outreach, CRM, tracking, performance analysis.">브랜드 인지도, 크리에이터 관계, 유료 인플루언서 예산 모두 없는 상태에서 인플루언서 마케팅 운영 전체를 처음부터 구축함.</p>
+          </div>
+
+          <figure>
+            <img class="img-contain-fullwidth"
+              src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (INFLUENCER CRM)/influencer crm dashboard masterlist.png"
+              alt="인플루언서 CRM 대시보드. Google Sheets 자체 설계"
+              onerror="this.style.background='#fff';this.removeAttribute('src')">
+            <figcaption data-kr="인플루언서 CRM 대시보드. Google Sheets 자체 설계" data-en="Influencer CRM Dashboard. Built in Google Sheets">인플루언서 CRM 대시보드. Google Sheets 자체 설계</figcaption>
+          </figure>
+
+          <div class="img-3col">
+            <figure>
+              <img class="img-contain"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (INFLUENCER CRM)/influencer db top performer.png"
+                alt="탑 퍼포머 분석"
+                onerror="this.style.background='#fff';this.removeAttribute('src')">
+              <figcaption data-kr="탑 퍼포머 분석" data-en="Top Performers">탑 퍼포머 분석</figcaption>
+            </figure>
+            <figure>
+              <img class="img-contain"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (INFLUENCER CRM)/influencer crm dashboard_monthly weekly overview.png"
+                alt="주간·월별 운영 현황"
+                onerror="this.style.background='#fff';this.removeAttribute('src')">
+              <figcaption data-kr="주간·월별 운영 현황" data-en="Weekly &amp; Monthly Overview">주간·월별 운영 현황</figcaption>
+            </figure>
+            <figure>
+              <img class="img-contain"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (INFLUENCER CRM)/influencer crm dashboard_monthly:weekly 성과.png"
+                alt="성과 데이터 트래킹"
+                onerror="this.style.background='#fff';this.removeAttribute('src')">
+              <figcaption data-kr="성과 데이터 트래킹" data-en="Performance Data Tracking">성과 데이터 트래킹</figcaption>
+            </figure>
+          </div>
+
+          <div class="block-label" data-kr="실행" data-en="Actions">실행</div>
+          <ul class="actions-list">
+            <li class="action-item">
+              <div class="action-title" data-kr="CRM 시스템 구축" data-en="CRM Build">CRM 시스템 구축</div>
+              <div class="action-desc" data-kr="Google Sheets + Notion으로 인플루언서 CRM 직접 설계. 크리에이터 프로필, 컨택 현황, 게시물 성과 통합 관리. 첫 2개월 1,300명+ 트래킹." data-en="Built influencer CRM in Google Sheets + Notion: creator profiles, contact status, post performance, content history. 1,300+ tracked in first 2 months.">Google Sheets + Notion으로 인플루언서 CRM 직접 설계. 크리에이터 프로필, 컨택 현황, 게시물 성과 통합 관리. 첫 2개월 1,300명+ 트래킹.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="크리에이터 소싱 기준 수립" data-en="Sourcing Framework">크리에이터 소싱 기준 수립</div>
+              <div class="action-desc" data-kr="미국 거주, 팔로워 대비 참여율, 업로드 빈도, 니치 적합성 기준 정립." data-en="Defined selection criteria: U.S.-based, ER vs. follower count, upload frequency, niche fit.">미국 거주, 팔로워 대비 참여율, 업로드 빈도, 니치 적합성 기준 정립.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="콘텐츠 가이드 제작" data-en="Content Guide">콘텐츠 가이드 제작</div>
+              <div class="action-desc" data-kr="HYDROBAE 브랜드 보이스, 사용 앵글, 메시지 방향 가이드 제작 및 배포 (v1 → v2)." data-en="Created and distributed HYDROBAE influencer content guide (v1 → v2).">HYDROBAE 브랜드 보이스, 사용 앵글, 메시지 방향 가이드 제작 및 배포 (v1 → v2).</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="아웃리치 A/B 테스트" data-en="Outreach Optimization">아웃리치 A/B 테스트</div>
+              <div class="action-desc" data-kr="방법·티어 믹스 주간 테스트. 콜드 아웃리치 회신율 10%+ 달성." data-en="Weekly A/B tests on method and tier mix. Achieved 10%+ cold reply rate.">방법·티어 믹스 주간 테스트. 콜드 아웃리치 회신율 10%+ 달성.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="인턴 채용·관리" data-en="Intern Hire">인턴 채용·관리</div>
+              <div class="action-desc" data-kr="채용 공고 작성, 1차 면접 진행, 인플루언서 시딩 인턴 선발 및 온보딩. 주간 보고 체계 구축." data-en="Wrote JD, conducted interviews, onboarded influencer seeding intern. Built weekly reporting cadence.">채용 공고 작성, 1차 면접 진행, 인플루언서 시딩 인턴 선발 및 온보딩. 주간 보고 체계 구축.</div>
+            </li>
+          </ul>
+
+          <div class="block-label" data-kr="성과" data-en="Results">성과</div>
+          <ul class="results-list">
+            <li data-kr="첫 2개월 CRM 내 크리에이터 1,300명+ 구축" data-en="1,300+ creators in CRM within first 2 months">첫 2개월 CRM 내 크리에이터 1,300명+ 구축</li>
+            <li data-kr="무상협업 콘텐츠를 통해 확보한 조회수 첫 달 20만+" data-en="200K+ views from gifted collaboration content in first month">무상협업 콘텐츠를 통해 확보한 조회수 첫 달 20만+</li>
+            <li data-kr="콜드 아웃리치 회신율 10%+" data-en="10%+ cold outreach reply rate">콜드 아웃리치 회신율 10%+</li>
+            <li data-kr="CPM $3 달성" data-en="$3 CPM achieved">CPM $3 달성</li>
+          </ul>
+
+          <div class="block-label" data-kr="회고" data-en="Reflection">회고</div>
+          <div class="reflection-block">
+            <p data-kr="일부 티어에 플랫 피 제안 방식을 도입했을 때, 오히려 아웃리치 수락률이 떨어졌습니다. 비용이 먼저 제시되는 순간, 인플루언서와의 관계는 협업보다 거래에 가까워집니다. 반면 브랜드가 왜 이 인플루언서와 함께해야 하는지를 명확한 훅과 장기 협업 구조로 제안했을 때 수락률이 유의미하게 높아졌습니다. 인플루언서 아웃리치에서 비용보다 먼저 설득해야 하는 것은 '왜 당신이어야 하는가'입니다." data-en='When we introduced a flat-fee proposal for certain tiers, reply rates dropped. The moment a fee structure leads the conversation, the relationship shifts from collaboration to transaction. In contrast, leading with a clear hook and offering a long-term partnership framework produced meaningfully higher acceptance rates. In influencer outreach, the first thing to earn is the "why you" before the compensation.'>일부 티어에 플랫 피 제안 방식을 도입했을 때, 오히려 아웃리치 수락률이 떨어졌습니다. 비용이 먼저 제시되는 순간, 인플루언서와의 관계는 협업보다 거래에 가까워집니다. 반면 브랜드가 왜 이 인플루언서와 함께해야 하는지를 명확한 훅과 장기 협업 구조로 제안했을 때 수락률이 유의미하게 높아졌습니다. 인플루언서 아웃리치에서 비용보다 먼저 설득해야 하는 것은 '왜 당신이어야 하는가'입니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PROJECT 2: AXIS-Y ═══ -->
+  <div class="project-block" style="margin-top:3rem;">
+    <div class="project-header light-bg">
+      <div class="container">
+        <div class="project-eyebrow" data-kr="프로젝트 2 · AXIS-Y 한국 스킨케어 · 2024" data-en="Project 2 · AXIS-Y Korean Skincare · 2024">프로젝트 2 · AXIS-Y 한국 스킨케어 · 2024</div>
+        <h2 class="project-title" data-kr="AXIS-Y 글로벌 마케팅" data-en="AXIS-Y Global Marketing">AXIS-Y 글로벌 마케팅</h2>
+        <p class="project-intro" data-kr="북미 타겟 인플루언서 200명 이상과 협업하며 캠페인을 기획·운영했습니다. 글로벌 Shopify 사이트 전면 리뉴얼, 브랜드 이벤트 3회 기획·실행까지 담당했습니다." data-en="Collaborated with 200+ North America influencers, led a full Shopify revamp, and executed 3 brand events. 8 months driving North America performance for a K-beauty brand.">북미 타겟 인플루언서 200명 이상과 협업하며 캠페인을 기획·운영했습니다. 글로벌 Shopify 사이트 전면 리뉴얼, 브랜드 이벤트 3회 기획·실행까지 담당했습니다.</p>
+        <div class="project-tags">
+          <span class="project-tag">Influencer Marketing</span>
+          <span class="project-tag">Shopify</span>
+          <span class="project-tag">Brand Events</span>
+          <span class="project-tag">K-Beauty</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AY Ch1 -->
+    <div class="chapter open" id="ay1">
+      <div class="container">
+        <button class="ch-toggle" onclick="toggleCh('ay1')">
+          <span class="ch-toggle-title" data-kr="Ch.1 북미 인플루언서 캠페인. 200명+ 협업, 무상협업 콘텐츠 총 조회수 1,700만+" data-en="Ch.1 North America Influencer Campaigns. 200+ Creators, 17M+ Total Views">Ch.1 북미 인플루언서 캠페인. 200명+ 협업, 무상협업 콘텐츠 총 조회수 1,700만+</span>
+          <span class="ch-arrow">▼</span>
+        </button>
+        <div class="ch-body">
+          <div class="bg-block">
+            <p data-kr="북미 타겟 인플루언서 200명 이상과 직접 협업하며 캠페인을 기획하고 운영함. 단순 제품 노출이 아닌 콘텐츠 훅 전략을 설계해, 무상협업 콘텐츠를 통해 확보한 총 조회수 1,700만+ 기록." data-en="Directly collaborated with 200+ influencers targeting North America. Designed content hook strategy beyond simple product placement, achieving 17M+ total views from gifted collaboration content.">북미 타겟 인플루언서 200명 이상과 직접 협업하며 캠페인을 기획하고 운영함. 단순 제품 노출이 아닌 콘텐츠 훅 전략을 설계해, 무상협업 콘텐츠를 통해 확보한 총 조회수 1,700만+ 기록.</p>
+          </div>
+
+          <!-- Portrait grid 2+2 -->
+          <div class="img-2col" style="margin-bottom:1rem;">
+            <figure>
+              <img class="img-portrait-45"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (SNS)/VIRAL CONTENT_BA2_8.6M views.png"
+                alt="Anti-Sell Hook. 860만 조회수"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="Anti-Sell Hook. 860만 조회수" data-en="Anti-Sell Hook. 8.6M views">Anti-Sell Hook. 860만 조회수</figcaption>
+            </figure>
+            <figure>
+              <img class="img-portrait-45"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (SNS)/VIRAL CONTENT_BA_2.1M views.png"
+                alt="Skeptic Rebuttal Hook. 210만 조회수"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="Skeptic Rebuttal Hook. 210만 조회수" data-en="Skeptic Rebuttal Hook. 2.1M views">Skeptic Rebuttal Hook. 210만 조회수</figcaption>
+            </figure>
+          </div>
+          <div class="img-2col" style="margin-bottom:1rem;">
+            <figure>
+              <img class="img-portrait-45"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (SNS)/VIRAL CONTENT_K-CELEBRITY STORYLINE HOOK_2.3M views.png"
+                alt="K-Celebrity Aspiration Hook. 230만 조회수"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="K-Celebrity Aspiration Hook. 230만 조회수" data-en="K-Celebrity Hook. 2.3M views">K-Celebrity Aspiration Hook. 230만 조회수</figcaption>
+            </figure>
+            <figure>
+              <img class="img-portrait-45"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (SNS)/VIRAL CONTENT_COMPETITOR COMPARISON_4.5M views.png"
+                alt="Competitor Discovery Hook. 450만 조회수"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="Competitor Discovery Hook. 450만 조회수" data-en="Discovery Hook. 4.5M views">Competitor Discovery Hook. 450만 조회수</figcaption>
+            </figure>
+          </div>
+          <figure>
+            <img class="img-fullwidth"
+              src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (SNS)/VIRAL CONTENT_VIEWS.png"
+              alt="캠페인 성과. 단일 영상 최대 860만 조회수"
+              onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+            <figcaption data-kr="캠페인 성과. 단일 영상 최대 860만 조회수" data-en="Campaign Results. 8.6M peak single-video views">캠페인 성과. 단일 영상 최대 860만 조회수</figcaption>
+          </figure>
+
+          <div class="block-label" data-kr="실행" data-en="Actions">실행</div>
+          <ul class="actions-list">
+            <li class="action-item">
+              <div class="action-title" data-kr="캠페인 기획·운영" data-en="Campaign Management">캠페인 기획·운영</div>
+              <div class="action-desc" data-kr="TikTok·Instagram 인플루언서 200명 이상과 직접 협업. 브리프 제작, 커뮤니케이션, 성과 분석 전 과정 인하우스 운영. 평균 CPM $4 달성." data-en="Directly collaborated with 200+ TikTok and Instagram influencers. Brief creation, communication, and performance analysis all managed in-house. Average CPM: $4.">TikTok·Instagram 인플루언서 200명 이상과 직접 협업. 브리프 제작, 커뮤니케이션, 성과 분석 전 과정 인하우스 운영. 평균 CPM $4 달성.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="콘텐츠 훅 전략 설계" data-en="Content Hook Strategy">콘텐츠 훅 전략 설계</div>
+              <div class="action-desc" data-kr="캠페인 목적별 훅 유형 설계 및 성과 분석. Anti-Sell Hook, Skeptic Rebuttal Hook, K-Celebrity Aspiration Hook, Competitor Discovery Hook 유형별 데이터 기반 최적화." data-en="Designed hook types by campaign objective: Anti-Sell, Skeptic Rebuttal, K-Celebrity Aspiration, Competitor Discovery. Optimized by performance data per hook type.">캠페인 목적별 훅 유형 설계 및 성과 분석. Anti-Sell Hook, Skeptic Rebuttal Hook, K-Celebrity Aspiration Hook, Competitor Discovery Hook 유형별 데이터 기반 최적화.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="성과 관리" data-en="Performance Tracking">성과 관리</div>
+              <div class="action-desc" data-kr="조회수·저장수·댓글 기준 성과 모니터링. 데이터 기반 캠페인 방향 조정." data-en="Monitored views, saves, comments. Adjusted campaign direction based on data.">조회수·저장수·댓글 기준 성과 모니터링. 데이터 기반 캠페인 방향 조정.</div>
+            </li>
+          </ul>
+
+          <div class="block-label" data-kr="성과" data-en="Results">성과</div>
+          <ul class="results-list">
+            <li data-kr="인플루언서 200명+ 직접 협업·관리" data-en="200+ influencers directly managed">인플루언서 200명+ 직접 협업·관리</li>
+            <li data-kr="무상협업 콘텐츠를 통해 확보한 총 조회수 1,700만+" data-en="17M+ total views from gifted collaboration content">무상협업 콘텐츠를 통해 확보한 총 조회수 1,700만+</li>
+            <li data-kr="단일 영상 최대 860만 조회수" data-en="8.6M peak single-video views">단일 영상 최대 860만 조회수</li>
+            <li data-kr="평균 CPM $4" data-en="$4 average CPM">평균 CPM $4</li>
+          </ul>
+
+          <div class="block-label" data-kr="회고" data-en="Reflection">회고</div>
+          <div class="reflection-block">
+            <p data-kr="조회수 860만을 만든 콘텐츠는 우리가 설계한 훅 전략 위에서 인플루언서가 자신의 언어로 재해석한 결과였습니다. 브랜드가 아무리 정교한 가이드를 만들더라도, 인플루언서가 자신의 오디언스를 바라보는 시각은 대체할 수 없습니다. 브랜드가 제공해야 하는 것은 메시지의 뼈대이고, 나머지는 인플루언서에게 맡기는 것이 바이럴 가능성을 높입니다. 과도한 가이드는 콘텐츠의 자연스러움을 해치고, 결과적으로 성과를 낮춥니다." data-en="The content that hit 8.6M views was built on the hook framework we designed, then reinterpreted by the creator in their own language. No brief we write can substitute for the creator's understanding of their own audience. The brand's job is to give the skeleton. The creator's job is to make it work for their feed. Over-guiding kills the naturalness that makes content go viral.">조회수 860만을 만든 콘텐츠는 우리가 설계한 훅 전략 위에서 인플루언서가 자신의 언어로 재해석한 결과였습니다. 브랜드가 아무리 정교한 가이드를 만들더라도, 인플루언서가 자신의 오디언스를 바라보는 시각은 대체할 수 없습니다. 브랜드가 제공해야 하는 것은 메시지의 뼈대이고, 나머지는 인플루언서에게 맡기는 것이 바이럴 가능성을 높입니다. 과도한 가이드는 콘텐츠의 자연스러움을 해치고, 결과적으로 성과를 낮춥니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AY Ch2 -->
+    <div class="chapter" id="ay2">
+      <div class="container">
+        <button class="ch-toggle" onclick="toggleCh('ay2')">
+          <span class="ch-toggle-title" data-kr="Ch.2 Shopify 글로벌 이커머스 리뉴얼. 전환율 15% 상승" data-en="Ch.2 Global Shopify Revamp. 15% CVR Increase">Ch.2 Shopify 글로벌 이커머스 리뉴얼. 전환율 15% 상승</span>
+          <span class="ch-arrow">▼</span>
+        </button>
+        <div class="ch-body">
+          <div class="bg-block">
+            <p data-kr="글로벌 이커머스 사이트 전면 리뉴얼을 총괄함. UX 기획, 카피라이팅, 외부 개발사 디렉팅, QA까지 담당." data-en="Led full Shopify revamp: UX architecture, copywriting, agency direction, QA.">글로벌 이커머스 사이트 전면 리뉴얼을 총괄함. UX 기획, 카피라이팅, 외부 개발사 디렉팅, QA까지 담당.</p>
+          </div>
+
+          <!-- Scrollable frames — Homepage -->
+          <p class="comparison-sublabel" data-kr="홈페이지 리뉴얼" data-en="Homepage Revamp">홈페이지 리뉴얼</p>
+          <div class="comparison-frames">
+            <div class="cf-col">
+              <div class="cf-label">BEFORE</div>
+              <div class="cf-scroll">
+                <img src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (WEBSITE)/BEFORE/axis-y- LANDING PAGE.png" alt="Before homepage revamp">
+              </div>
+            </div>
+            <div class="cf-col">
+              <div class="cf-label">AFTER</div>
+              <div class="cf-scroll">
+                <img src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (WEBSITE)/AFTER/screencapture-axis-y-2024-11-12-23_08_37.png" alt="After homepage revamp">
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable frames — PDP -->
+          <p class="comparison-sublabel" data-kr="제품 상세 페이지 리뉴얼" data-en="PDP Revamp">제품 상세 페이지 리뉴얼</p>
+          <div class="comparison-frames">
+            <div class="cf-col">
+              <div class="cf-label">BEFORE</div>
+              <div class="cf-scroll">
+                <img src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (WEBSITE)/BEFORE/axis-y-PDP-vegan collagen eye serum.png" alt="Before PDP revamp">
+              </div>
+            </div>
+            <div class="cf-col">
+              <div class="cf-label">AFTER</div>
+              <div class="cf-scroll">
+                <img src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (WEBSITE)/AFTER/screencapture-axis-y-collections-best-seller-products-vegan-collagen-eye-serum-2024-10-29-12_18_40.png" alt="After PDP revamp">
+              </div>
+            </div>
+          </div>
+
+          <div class="block-label" data-kr="실행" data-en="Actions">실행</div>
+          <ul class="actions-list">
+            <li class="action-item">
+              <div class="action-title" data-kr="UX 감사 및 구조 설계" data-en="UX Audit">UX 감사 및 구조 설계</div>
+              <div class="action-desc" data-kr="기존 고객 여정 분석, 이탈 포인트 파악, 전체 페이지 정보 구조 재설계." data-en="Mapped customer journey, identified drop-off points, redesigned full information architecture.">기존 고객 여정 분석, 이탈 포인트 파악, 전체 페이지 정보 구조 재설계.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="카피라이팅" data-en="Copywriting">카피라이팅</div>
+              <div class="action-desc" data-kr="전체 사이트 카피 작성. PDP, 컬렉션, 어바웃, FAQ, 랜딩 페이지. 글로벌 소비자 기준 톤." data-en="Wrote all site copy: PDPs, collections, About, FAQ, landing pages. Global-market tone.">전체 사이트 카피 작성. PDP, 컬렉션, 어바웃, FAQ, 랜딩 페이지. 글로벌 소비자 기준 톤.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="개발사 디렉팅" data-en="Agency Direction">개발사 디렉팅</div>
+              <div class="action-desc" data-kr="외부 Shopify 개발사에 섹션별 요건, UX 스펙 기준으로 정밀 브리핑. 검토 및 QA 담당." data-en="Briefed external Shopify dev agency with section-by-section specs. Managed review cycles and QA.">외부 Shopify 개발사에 섹션별 요건, UX 스펙 기준으로 정밀 브리핑. 검토 및 QA 담당.</div>
+            </li>
+          </ul>
+
+          <div class="block-label" data-kr="성과" data-en="Results">성과</div>
+          <div class="results-grid">
+            <div class="result-card">
+              <span class="result-num">15%</span>
+              <span class="result-desc" data-kr="전환율 상승" data-en="CVR increase">전환율 상승</span>
+            </div>
+            <div class="result-card">
+              <span class="result-num">10%</span>
+              <span class="result-desc" data-kr="온라인 매출 증가" data-en="Online sales uplift">온라인 매출 증가</span>
+            </div>
+          </div>
+
+          <div class="block-label" data-kr="회고" data-en="Reflection">회고</div>
+          <div class="reflection-block">
+            <p data-kr="글로벌 이커머스 사이트의 리뉴얼은 디자인보다 구조적 완성도가 먼저입니다. 카피의 일관성, UX 흐름, 제품 정보의 정확성이 전환율에 직접 영향을 미칩니다. 영어권 소비자에게 맞는 브랜드 보이스를 새롭게 설계하는 것이 번역이 아닌 별도의 마케팅 전략임을 이 프로젝트를 통해 확인했습니다." data-en="A global e-commerce revamp is a structural problem before it is a design problem. Copy consistency, UX flow, and product information accuracy are what actually move conversion. Building a brand voice that works for English-speaking consumers is its own marketing strategy, not a translation task.">글로벌 이커머스 사이트의 리뉴얼은 디자인보다 구조적 완성도가 먼저입니다. 카피의 일관성, UX 흐름, 제품 정보의 정확성이 전환율에 직접 영향을 미칩니다. 영어권 소비자에게 맞는 브랜드 보이스를 새롭게 설계하는 것이 번역이 아닌 별도의 마케팅 전략임을 이 프로젝트를 통해 확인했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AY Ch3 -->
+    <div class="chapter" id="ay3">
+      <div class="container">
+        <button class="ch-toggle" onclick="toggleCh('ay3')">
+          <span class="ch-toggle-title" data-kr="Ch.3 브랜드 이벤트 3회 총괄 관리 및 실행. 이벤트별 조회수 300–500만+" data-en="Ch.3 Brand Events ×3. 3–5M+ Views Per Event">Ch.3 브랜드 이벤트 3회 총괄 관리 및 실행. 이벤트별 조회수 300–500만+</span>
+          <span class="ch-arrow">▼</span>
+        </button>
+        <div class="ch-body">
+          <div class="bg-block">
+            <p data-kr="서울 2회, 제주 1회의 오프라인 브랜드 이벤트를 총괄 관리 및 실행함. 제주 이벤트는 약 2억 원 규모로, 해외 인플루언서 10명이 참가함." data-en="Planned and executed 3 offline brand events: 2 in Seoul, 1 in Jeju. Jeju event: ~₩200M budget, 10 international influencers.">서울 2회, 제주 1회의 오프라인 브랜드 이벤트를 총괄 관리 및 실행함. 제주 이벤트는 약 2억 원 규모로, 해외 인플루언서 10명이 참가함.</p>
+          </div>
+
+          <!-- Jeju images -->
+          <div class="sub-label" data-kr="제주 인플루언서 이벤트" data-en="Jeju Influencer Event">제주 인플루언서 이벤트</div>
+          <div class="img-3col">
+            <figure>
+              <img class="img-portrait-34"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (OFFLINE EVENT)/JEJU EVENT/jeju event_custom made branded arch.png"
+                alt="제주 이벤트. 커스텀 브랜딩 아치"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="제주 이벤트. 커스텀 브랜딩 아치" data-en="Jeju Event. Custom Branded Arch">제주 이벤트. 커스텀 브랜딩 아치</figcaption>
+            </figure>
+            <figure>
+              <img class="img-portrait-34"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (OFFLINE EVENT)/JEJU EVENT/jeju event_custom made branded brand history panels.png"
+                alt="브랜드 히스토리 패널 설치"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="브랜드 히스토리 패널 설치" data-en="Brand History Panels Installation">브랜드 히스토리 패널 설치</figcaption>
+            </figure>
+            <figure>
+              <img class="img-portrait-34"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (OFFLINE EVENT)/JEJU EVENT/jeju event_custom made branded display cart.png"
+                alt="브랜드 디스플레이 카트"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="브랜드 디스플레이 카트" data-en="Branded Display Cart">브랜드 디스플레이 카트</figcaption>
+            </figure>
+          </div>
+
+          <!-- Eye Serum images -->
+          <div class="sub-label" data-kr="비건 콜라겐 아이세럼 론칭 이벤트" data-en="Vegan Collagen Eye Serum Launch">비건 콜라겐 아이세럼 론칭 이벤트</div>
+          <div class="img-3col">
+            <figure>
+              <img class="img-portrait-34"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (OFFLINE EVENT)/EYE SERUM LAUNCH EVENT/PR box for eyeserum launch event.jpeg"
+                alt="이벤트 PR 패키지"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="이벤트 PR 패키지" data-en="Event PR Package">이벤트 PR 패키지</figcaption>
+            </figure>
+            <figure>
+              <img class="img-portrait-34"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (OFFLINE EVENT)/EYE SERUM LAUNCH EVENT/aesthetic mirror detail for event.png"
+                alt="브랜드 미러 설치물"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="브랜드 미러 설치물" data-en="Brand Mirror Installation">브랜드 미러 설치물</figcaption>
+            </figure>
+            <figure>
+              <img class="img-portrait-34"
+                src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (OFFLINE EVENT)/EYE SERUM LAUNCH EVENT/aesthetic setup for event.png"
+                alt="이벤트 공간 연출"
+                onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
+              <figcaption data-kr="이벤트 공간 연출" data-en="Event Space Aesthetic">이벤트 공간 연출</figcaption>
+            </figure>
+          </div>
+
+          <div class="block-label" data-kr="실행" data-en="Actions">실행</div>
+          <ul class="actions-list">
+            <li class="action-item">
+              <div class="action-title" data-kr="제주 인플루언서 이벤트" data-en="Jeju Influencer Event">제주 인플루언서 이벤트</div>
+              <div class="action-desc" data-kr="약 2억 원 예산 전체 관리. 행사장, 항공, 숙박, 인플루언서 비용 코디네이션. 해외 인플루언서 10명 참가. 이벤트 콘텐츠 조회수 300–500만+." data-en="Managed full ₩200M budget: venue, flights, accommodation, influencer fees. Coordinated 10 international influencers. 3–5M+ content views.">약 2억 원 예산 전체 관리. 행사장, 항공, 숙박, 인플루언서 비용 코디네이션. 해외 인플루언서 10명 참가. 이벤트 콘텐츠 조회수 300–500만+.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="비건 콜라겐 아이세럼 론칭 이벤트" data-en="Vegan Collagen Eye Serum Launch Event">비건 콜라겐 아이세럼 론칭 이벤트</div>
+              <div class="action-desc" data-kr="인플루언서 50명 초청. PR 패키지 제작, GWP(구매 사은품) 기획, 행사장 브랜딩 및 공간 연출, 현장 체험 활동 총괄 관리 및 실행." data-en="50 influencers invited. PR package production, GWP planning, venue branding and space styling, on-site experience activities. Full event management and execution.">인플루언서 50명 초청. PR 패키지 제작, GWP(구매 사은품) 기획, 행사장 브랜딩 및 공간 연출, 현장 체험 활동 총괄 관리 및 실행.</div>
+            </li>
+            <li class="action-item">
+              <div class="action-title" data-kr="서울 브랜드 이벤트" data-en="Seoul Brand Events">서울 브랜드 이벤트</div>
+              <div class="action-desc" data-kr="아이세럼 론칭 이벤트 포함 서울 브랜드 이벤트 2회 기획·실행." data-en="Planned and executed 2 Seoul brand activations including Eye Serum launch.">아이세럼 론칭 이벤트 포함 서울 브랜드 이벤트 2회 기획·실행.</div>
+            </li>
+          </ul>
+
+          <div class="block-label" data-kr="성과" data-en="Results">성과</div>
+          <ul class="results-list">
+            <li data-kr="제주 이벤트: 해외 인플루언서 10명, 약 2억 원 예산 총괄 관리 및 실행" data-en="Jeju event: 10 international influencers, ~₩200M budget managed end-to-end">제주 이벤트: 해외 인플루언서 10명, 약 2억 원 예산 총괄 관리 및 실행</li>
+            <li data-kr="아이세럼 론칭 이벤트: 인플루언서 50명 초청, 행사장 브랜딩·GWP·체험 활동 총괄" data-en="Eye Serum launch: 50 influencers invited, venue branding, GWP, experience activities">아이세럼 론칭 이벤트: 인플루언서 50명 초청, 행사장 브랜딩·GWP·체험 활동 총괄</li>
+            <li data-kr="이벤트별 콘텐츠 조회수 300–500만+" data-en="3–5M+ content views per event">이벤트별 콘텐츠 조회수 300–500만+</li>
+            <li data-kr="총 3회 브랜드 이벤트 기획·실행" data-en="3 total brand events planned and executed">총 3회 브랜드 이벤트 기획·실행</li>
+          </ul>
+
+          <div class="block-label" data-kr="회고" data-en="Reflection">회고</div>
+          <div class="reflection-block">
+            <p data-kr="오프라인 이벤트의 ROI는 판매 채널 구조에 따라 측정 방식이 완전히 달라집니다. 당시 D2C 직접 전환 채널이 없는 상황에서, 이벤트 성과는 B2B 바이어와의 계약 변화로만 간접 확인할 수 있었습니다. D2C 채널이 열린다면, 이벤트 전후의 트래픽 스파이크, 전환율 변화, 리텐션 지표를 기반으로 실질적인 이벤트 ROI를 설계할 수 있습니다. 오프라인 이벤트 전략은 타겟이 B2B인지 B2C인지 D2C인지에 따라 KPI 설계부터 달라져야 합니다." data-en="Offline event ROI depends entirely on your sales channel structure. With no direct D2C channel at the time, we could only read outcomes indirectly through B2B buyer deal volume, not conversion data. With a D2C channel in place, you can measure post-event traffic spikes, CVR shifts, and retention. The core lesson: offline event KPIs must be designed based on whether the target outcome is B2B, B2C, or D2C. They are not interchangeable.">오프라인 이벤트의 ROI는 판매 채널 구조에 따라 측정 방식이 완전히 달라집니다. 당시 D2C 직접 전환 채널이 없는 상황에서, 이벤트 성과는 B2B 바이어와의 계약 변화로만 간접 확인할 수 있었습니다. D2C 채널이 열린다면, 이벤트 전후의 트래픽 스파이크, 전환율 변화, 리텐션 지표를 기반으로 실질적인 이벤트 ROI를 설계할 수 있습니다. 오프라인 이벤트 전략은 타겟이 B2B인지 B2C인지 D2C인지에 따라 KPI 설계부터 달라져야 합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-label" data-kr="연락처" data-en="Contact">연락처</div>
+      <h2 class="section-title" data-kr="연락처" data-en="Contact">연락처</h2>
+      <div class="contact-links">
+        <a href="mailto:eunicekoh.yjee@gmail.com" class="contact-link">
+          <span class="contact-icon">✉️</span>
+          eunicekoh.yjee@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/euniceykoh" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-icon">💼</span>
+          linkedin.com/in/euniceykoh
+        </a>
+        <a href="tel:+821065982362" class="contact-link">
+          <span class="contact-icon">📱</span>
+          +82-10-6598-2362
+        </a>
+      </div>
+      <a href="mailto:eunicekoh.yjee@gmail.com" class="btn-primary" data-kr="이메일 보내기" data-en="Send Email">이메일 보내기</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p data-kr="© 2026 고윤지. All rights reserved." data-en="© 2026 Eunice Yunjee Koh. All rights reserved.">© 2026 고윤지. All rights reserved.</p>
+</footer>
+
+<script>
+  // ── LANGUAGE TOGGLE ──
+  const langBtn = document.getElementById('lang-btn');
+  const saved = localStorage.getItem('portfolio-lang');
+  let lang = saved || 'ko';
+
+  function applyLang(l) {
+    lang = l;
+    localStorage.setItem('portfolio-lang', l);
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-kr]').forEach(el => {
+      const val = l === 'ko' ? el.dataset.kr : el.dataset.en;
+      if (val !== undefined && val !== '') {
+        if (/&[a-z]+;|&#/.test(val)) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      }
+    });
+    langBtn.textContent = l === 'ko' ? 'EN' : '한국어';
+    langBtn.setAttribute('aria-label', l === 'ko' ? 'Switch to English' : '한국어로 전환');
+  }
+
+  langBtn.addEventListener('click', () => applyLang(lang === 'ko' ? 'en' : 'ko'));
+  applyLang(lang);
+
+  // ── MOBILE NAV ──
+  const hamburger = document.getElementById('nav-hamburger');
+  const mobileNav = document.getElementById('nav-mobile');
+  hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+  // ── CHAPTERS ──
+  function toggleCh(id) {
+    const ch = document.getElementById(id);
+    if (ch) ch.classList.toggle('open');
+  }
+
+  // ── SCROLL FADE IN ──
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const siblings = entry.target.parentElement ? entry.target.parentElement.querySelectorAll('.fade-in') : [];
+        let delay = 0;
+        siblings.forEach((sib, idx) => { if (sib === entry.target) delay = idx * 60; });
+        setTimeout(() => entry.target.classList.add('visible'), delay);
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+</script>
+</body>
+</html>
