@@ -512,8 +512,10 @@
       margin: 1.5rem 0;
     }
     .img-2col-contain {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
       gap: 1rem;
       margin: 1.5rem 0;
     }
@@ -809,8 +811,8 @@
       <li><a href="#experience" data-kr="경력" data-en="Career">경력</a></li>
       <li><a href="#case-studies" data-kr="프로젝트" data-en="Work">프로젝트</a></li>
       <li><a href="#contact" data-kr="연락처" data-en="Contact">연락처</a></li>
-      <li><button id="lang-btn" aria-label="Switch to English">EN</button></li>
     </ul>
+    <button id="lang-btn" aria-label="Switch to English">EN</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="메뉴 열기">
       <span></span><span></span><span></span>
     </button>
@@ -1126,21 +1128,21 @@
 
           <!-- Amazon A+ -->
           <div class="block-label" data-kr="아마존 A+ 콘텐츠" data-en="Amazon A+ Content">아마존 A+ 콘텐츠</div>
-          <p data-kr="경쟁사 A+ 페이지 20개+ 분석을 바탕으로 PDP 전환 최적화를 위한 콘텐츠 구조를 직접 기획했습니다. 브랜드 디자인팀과의 크로스팀 협업과 수차례의 수정 과정을 거쳐 최종 디자인을 완성했습니다." data-en="Developed the A+ content architecture from a competitive analysis of 20+ pages, structured for PDP conversion. Final design completed through cross-team collaboration and multiple rounds of iteration with the brand design team.">경쟁사 A+ 페이지 20개+ 분석을 바탕으로 PDP 전환 최적화를 위한 콘텐츠 구조를 직접 기획했습니다. 브랜드 디자인팀과의 크로스팀 협업과 수차례의 수정 과정을 거쳐 최종 디자인을 완성했습니다.</p>
+          <p style="font-size:0.875rem;color:var(--muted);line-height:1.55;margin:0.5rem 0 1rem;" data-kr="경쟁사 A+ 페이지 20개+ 분석을 바탕으로 PDP 전환 최적화를 위한 콘텐츠 구조를 직접 기획했습니다. 브랜드 디자인팀과의 크로스팀 협업과 수차례의 수정 과정을 거쳐 최종 디자인을 완성했습니다." data-en="Developed the A+ content architecture from a competitive analysis of 20+ pages, structured for PDP conversion. Final design completed through cross-team collaboration and multiple rounds of iteration with the brand design team.">경쟁사 A+ 페이지 20개+ 분석을 바탕으로 PDP 전환 최적화를 위한 콘텐츠 구조를 직접 기획했습니다. 브랜드 디자인팀과의 크로스팀 협업과 수차례의 수정 과정을 거쳐 최종 디자인을 완성했습니다.</p>
           <div class="img-2col-contain">
             <figure>
-              <img class="img-contain"
+              <img
                 src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE_AMAZON)/amazon_a+ content structure.png"
                 alt="A+ 콘텐츠 기획안. 훅·본문·클로징 3단 프레임워크, 7블록 구조 설계"
-                style="aspect-ratio:3/4;object-fit:contain;background-color:#F8F9FC;"
+                style="height:520px;width:auto;display:block;border-radius:8px;"
                 onerror="this.style.background='#F8F9FC';this.removeAttribute('src')">
               <figcaption data-kr="A+ 콘텐츠 기획안. 훅·본문·클로징 3단 프레임워크, 7블록 구조 설계" data-en="A+ Content Blueprint. Hook, Body, Closing Framework — 7-Block Architecture">A+ 콘텐츠 기획안. 훅·본문·클로징 3단 프레임워크, 7블록 구조 설계</figcaption>
             </figure>
             <figure>
-              <img class="img-contain"
+              <img
                 src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (HYDROBAE_AMAZON)/amazon_a+content_final design.png"
                 alt="A+ 콘텐츠 최종 디자인. 브랜드 디자인팀 협업·다수 수정 과정 완료"
-                style="aspect-ratio:3/4;object-fit:contain;background-color:#F8F9FC;"
+                style="height:520px;width:auto;display:block;border-radius:8px;"
                 onerror="this.style.background='#F8F9FC';this.removeAttribute('src')">
               <figcaption data-kr="A+ 콘텐츠 최종 디자인. 브랜드 디자인팀 협업·다수 수정 과정 완료" data-en="A+ Content Final Design. Completed through iteration and cross-team collaboration">A+ 콘텐츠 최종 디자인. 브랜드 디자인팀 협업·다수 수정 과정 완료</figcaption>
             </figure>
@@ -1200,6 +1202,7 @@
             <img class="img-fullwidth"
               src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (META)/eunice_portfolio_meta dashboard.png"
               alt="메타 광고 매니저. 주요 영상 CTR 6.67%"
+              style="aspect-ratio:auto;height:auto;object-fit:contain;background:transparent;"
               onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
             <figcaption data-kr="메타 광고 매니저. 주요 영상 CTR 6.67%" data-en="Meta Ads Manager. Primary Video CTR 6.67%">메타 광고 매니저. 주요 영상 CTR 6.67%</figcaption>
           </figure>
@@ -1263,6 +1266,7 @@
             <img class="img-contain-fullwidth"
               src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (INFLUENCER CRM)/influencer crm dashboard masterlist.png"
               alt="인플루언서 CRM 대시보드. Google Sheets 자체 설계"
+              style="aspect-ratio:auto;height:auto;"
               onerror="this.style.background='#fff';this.removeAttribute('src')">
             <figcaption data-kr="인플루언서 CRM 대시보드. Google Sheets 자체 설계" data-en="Influencer CRM Dashboard. Built in Google Sheets">인플루언서 CRM 대시보드. Google Sheets 자체 설계</figcaption>
           </figure>
@@ -1272,6 +1276,7 @@
               <img class="img-contain"
                 src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (INFLUENCER CRM)/influencer db top performer.png"
                 alt="탑 퍼포머 분석"
+                style="aspect-ratio:5/2;"
                 onerror="this.style.background='#fff';this.removeAttribute('src')">
               <figcaption data-kr="탑 퍼포머 분석" data-en="Top Performers">탑 퍼포머 분석</figcaption>
             </figure>
@@ -1279,6 +1284,7 @@
               <img class="img-contain"
                 src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (INFLUENCER CRM)/influencer crm dashboard_monthly weekly overview.png"
                 alt="주간·월별 운영 현황"
+                style="aspect-ratio:5/2;"
                 onerror="this.style.background='#fff';this.removeAttribute('src')">
               <figcaption data-kr="주간·월별 운영 현황" data-en="Weekly &amp; Monthly Overview">주간·월별 운영 현황</figcaption>
             </figure>
@@ -1286,6 +1292,7 @@
               <img class="img-contain"
                 src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (INFLUENCER CRM)/influencer crm dashboard_monthly:weekly 성과.png"
                 alt="성과 데이터 트래킹"
+                style="aspect-ratio:5/2;"
                 onerror="this.style.background='#fff';this.removeAttribute('src')">
               <figcaption data-kr="성과 데이터 트래킹" data-en="Performance Data Tracking">성과 데이터 트래킹</figcaption>
             </figure>
@@ -1360,8 +1367,8 @@
             <p data-kr="북미 타겟 인플루언서 200명 이상과 협업하며 캠페인을 운영했습니다. 단순 제품 노출이 아니라 콘텐츠 훅 구조를 설계해, 무상 협업 콘텐츠 기준 총 조회수 1,700만+를 기록했습니다." data-en="Worked with 200+ influencers targeting North America and designed hook strategies that went beyond simple product exposure. The result was 17M+ total views from gifted collaboration content.">북미 타겟 인플루언서 200명 이상과 협업하며 캠페인을 운영했습니다. 단순 제품 노출이 아니라 콘텐츠 훅 구조를 설계해, 무상 협업 콘텐츠 기준 총 조회수 1,700만+를 기록했습니다.</p>
           </div>
 
-          <!-- Portrait grid 2+2 -->
-          <div class="img-2col" style="margin-bottom:1rem;">
+          <!-- Portrait grid 4-col single row -->
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.5rem 0;">
             <figure>
               <img class="img-portrait-45"
                 src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (SNS)/VIRAL CONTENT_BA2_8.6M views.png"
@@ -1376,8 +1383,6 @@
                 onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
               <figcaption data-kr="Skeptic Rebuttal Hook. 210만 조회수" data-en="Skeptic Rebuttal Hook. 2.1M views">Skeptic Rebuttal Hook. 210만 조회수</figcaption>
             </figure>
-          </div>
-          <div class="img-2col" style="margin-bottom:1rem;">
             <figure>
               <img class="img-portrait-45"
                 src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (SNS)/VIRAL CONTENT_K-CELEBRITY STORYLINE HOOK_2.3M views.png"
@@ -1393,13 +1398,6 @@
               <figcaption data-kr="Competitor Discovery Hook. 450만 조회수" data-en="Discovery Hook. 4.5M views">Competitor Discovery Hook. 450만 조회수</figcaption>
             </figure>
           </div>
-          <figure>
-            <img class="img-fullwidth"
-              src="고윤지_PORTFOLIO/고윤지_IMAGES:REFERENCES (SNS)/VIRAL CONTENT_VIEWS.png"
-              alt="캠페인 성과. 단일 영상 최대 860만 조회수"
-              onerror="this.style.background='#D6E4F7';this.removeAttribute('src')">
-            <figcaption data-kr="캠페인 성과. 단일 영상 최대 860만 조회수" data-en="Campaign Results. 8.6M peak single-video views">캠페인 성과. 단일 영상 최대 860만 조회수</figcaption>
-          </figure>
 
           <div class="block-label" data-kr="실행" data-en="Actions">실행</div>
           <ul class="actions-list">
