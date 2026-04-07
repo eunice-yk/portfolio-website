@@ -349,6 +349,8 @@
       font-family: var(--font-display);
     }
     .skill-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
+    .skill-desc ul { margin: 0; padding-left: 1rem; list-style: disc; }
+    .skill-desc li { margin-bottom: 0.2rem; }
     @media (max-width: 768px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 480px) { .skills-grid { grid-template-columns: 1fr; } }
 
@@ -895,34 +897,86 @@
     <h2 class="section-title" data-kr="주요 역량" data-en="Core Competencies">주요 역량</h2>
     <div class="skills-grid">
       <div class="skill-card fade-in">
-        <div class="skill-icon">🚀</div>
-        <div class="skill-title" data-kr="GTM 전략" data-en="GTM Strategy">GTM 전략</div>
-        <div class="skill-desc" data-kr="시장 진입 전략 수립, P&amp;L 모델링, 채널 선정, 사업 로드맵 설계" data-en="Market entry strategy, P&amp;L modeling, channel selection, business roadmap design">시장 진입 전략 수립, P&amp;L 모델링, 채널 선정, 사업 로드맵 설계</div>
+        <div class="skill-icon">💡</div>
+        <div class="skill-title" data-kr="상품기획" data-en="Product Planning">상품기획</div>
+        <div class="skill-desc">
+          <ul>
+            <li data-kr="소비자 인사이트 &amp; VOC 분석" data-en="Consumer Insight &amp; VOC Analysis">소비자 인사이트 &amp; VOC 분석</li>
+            <li data-kr="시장 조사 · 규모 분석 · 시장 적합성 검증" data-en="Market Research, Sizing &amp; Fit">시장 조사 · 규모 분석 · 시장 적합성 검증</li>
+            <li data-kr="경쟁사 분석 &amp; 포지셔닝" data-en="Competitive Analysis &amp; Positioning">경쟁사 분석 &amp; 포지셔닝</li>
+            <li data-kr="원가 구조 분석" data-en="Cost Structure Analysis">원가 구조 분석</li>
+            <li data-kr="원료 분석 &amp; 배합비 설계" data-en="Ingredient Analysis &amp; Formulation Design">원료 분석 &amp; 배합비 설계</li>
+            <li data-kr="제품 제안서 기획 및 제작 (영/한)" data-en="Product Pitch Deck Development (EN/KR)">제품 제안서 기획 및 제작 (영/한)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-icon">🎯</div>
+        <div class="skill-title" data-kr="브랜드 &amp; 콘텐츠 전략" data-en="Brand &amp; Content Strategy">브랜드 &amp; 콘텐츠 전략</div>
+        <div class="skill-desc">
+          <ul>
+            <li data-kr="GTM 전략" data-en="Go-to-Market Strategy">GTM 전략</li>
+            <li data-kr="브랜드 포지셔닝" data-en="Brand Positioning">브랜드 포지셔닝</li>
+            <li data-kr="콘텐츠 기획 &amp; 제작" data-en="Content Direction &amp; Scripting">콘텐츠 기획 &amp; 제작</li>
+            <li data-kr="인플루언서 마케팅" data-en="Influencer Marketing">인플루언서 마케팅</li>
+            <li data-kr="UGC 캠페인 설계" data-en="UGC Campaign Design">UGC 캠페인 설계</li>
+            <li data-kr="SEO 기반 상품 카피라이팅 (아마존 · 쇼피파이)" data-en="SEO-Driven Product Copywriting (Amazon &amp; Shopify)">SEO 기반 상품 카피라이팅 (아마존 · 쇼피파이)</li>
+            <li data-kr="SNS 계정 운영 (틱톡, 인스타그램)" data-en="Social Media (TikTok, Instagram)">SNS 계정 운영 (틱톡, 인스타그램)</li>
+          </ul>
+        </div>
       </div>
       <div class="skill-card fade-in">
         <div class="skill-icon">📊</div>
-        <div class="skill-title" data-kr="퍼포먼스 마케팅" data-en="Performance Marketing">퍼포먼스 마케팅</div>
-        <div class="skill-desc" data-kr="Meta Ads, Amazon PPC, A/B 테스트 프레임워크, 데이터 기반 크리에이티브 최적화" data-en="Meta Ads, Amazon PPC, A/B testing frameworks, data-driven creative optimization">Meta Ads, Amazon PPC, A/B 테스트 프레임워크, 데이터 기반 크리에이티브 최적화</div>
-      </div>
-      <div class="skill-card fade-in">
-        <div class="skill-icon">🤝</div>
-        <div class="skill-title" data-kr="인플루언서 마케팅" data-en="Influencer Marketing">인플루언서 마케팅</div>
-        <div class="skill-desc" data-kr="CRM 구축, 크리에이터 소싱·아웃리치, 캠페인 기획·운영, 콘텐츠 훅 전략" data-en="CRM build, creator sourcing &amp; outreach, campaign management, content hook strategy">CRM 구축, 크리에이터 소싱·아웃리치, 캠페인 기획·운영, 콘텐츠 훅 전략</div>
+        <div class="skill-title" data-kr="퍼포먼스 마케팅" data-en="Growth &amp; Performance Marketing">퍼포먼스 마케팅</div>
+        <div class="skill-desc">
+          <ul>
+            <li data-kr="아마존 SP 광고 (CPC)" data-en="Amazon Sponsored Products (CPC)">아마존 SP 광고 (CPC)</li>
+            <li data-kr="메타 광고 (FB/IG/릴스)" data-en="Meta Ads (FB/IG/Reels)">메타 광고 (FB/IG/릴스)</li>
+            <li data-kr="Helium 10 AI 자동화" data-en="Helium 10 AI Automation">Helium 10 AI 자동화</li>
+            <li data-kr="A/B 크리에이티브 테스트" data-en="A/B Creative Testing">A/B 크리에이티브 테스트</li>
+            <li data-kr="성과 기여도 분석" data-en="Attribution Modeling">성과 기여도 분석</li>
+            <li data-kr="CTR/CPC 최적화" data-en="CTR/CPC Optimization">CTR/CPC 최적화</li>
+          </ul>
+        </div>
       </div>
       <div class="skill-card fade-in">
         <div class="skill-icon">🛒</div>
-        <div class="skill-title" data-kr="이커머스" data-en="E-commerce">이커머스</div>
-        <div class="skill-desc" data-kr="Amazon 브랜드스토어·PDP, Shopify, A+ 콘텐츠, FBA/3PL 운영" data-en="Amazon Brand Store &amp; PDP, Shopify, A+ content, FBA/3PL operations">Amazon 브랜드스토어·PDP, Shopify, A+ 콘텐츠, FBA/3PL 운영</div>
+        <div class="skill-title" data-kr="이커머스 &amp; 운영" data-en="E-Commerce &amp; Operations">이커머스 &amp; 운영</div>
+        <div class="skill-desc">
+          <ul>
+            <li data-kr="아마존 신규 브랜드 입점 · 계정 구축" data-en="Amazon Market Entry &amp; Account Build">아마존 신규 브랜드 입점 · 계정 구축</li>
+            <li data-kr="아마존 브랜드스토어 &amp; A+ 콘텐츠" data-en="Amazon Brand Store &amp; A+ Content">아마존 브랜드스토어 &amp; A+ 콘텐츠</li>
+            <li data-kr="쇼피파이 스토어 구축 및 운영" data-en="Shopify Store Build &amp; Operations">쇼피파이 스토어 구축 및 운영</li>
+            <li data-kr="P&amp;L 모델링" data-en="P&amp;L Modeling">P&amp;L 모델링</li>
+            <li data-kr="FDA 컴플라이언스 &amp; 수출 물류" data-en="FDA Compliance &amp; Export Logistics">FDA 컴플라이언스 &amp; 수출 물류</li>
+            <li data-kr="3PL &amp; FBA 운영" data-en="3PL &amp; FBA Management">3PL &amp; FBA 운영</li>
+          </ul>
+        </div>
       </div>
       <div class="skill-card fade-in">
-        <div class="skill-icon">🎪</div>
-        <div class="skill-title" data-kr="브랜드 마케팅" data-en="Brand Marketing">브랜드 마케팅</div>
-        <div class="skill-desc" data-kr="오프라인 이벤트 기획·실행, PR, 브랜드 콘텐츠 가이드, 크리에이티브 디렉팅" data-en="Offline event planning &amp; execution, PR, brand content guides, creative direction">오프라인 이벤트 기획·실행, PR, 브랜드 콘텐츠 가이드, 크리에이티브 디렉팅</div>
+        <div class="skill-icon">🌐</div>
+        <div class="skill-title" data-kr="BD &amp; 글로벌 수출" data-en="BD &amp; Global Export">BD &amp; 글로벌 수출</div>
+        <div class="skill-desc">
+          <ul>
+            <li data-kr="해외 바이어 발굴" data-en="Overseas B2B Buyer Development">해외 바이어 발굴</li>
+            <li data-kr="수출 서류 관리 (물류 · FDA 규정)" data-en="Export Documentation (Freight &amp; US FDA Compliance)">수출 서류 관리 (물류 · FDA 규정)</li>
+            <li data-kr="제조사 협상" data-en="Manufacturing Negotiation">제조사 협상</li>
+            <li data-kr="해외 오프라인 리테일 제안서 기획 및 제작" data-en="Offline Retail Proposal &amp; Pitching (H-Mart, Costco Canada)">해외 오프라인 리테일 제안서 기획 및 제작</li>
+          </ul>
+        </div>
       </div>
       <div class="skill-card fade-in">
-        <div class="skill-icon">📋</div>
-        <div class="skill-title" data-kr="수출·컴플라이언스" data-en="Export &amp; Compliance">수출·컴플라이언스</div>
-        <div class="skill-desc" data-kr="FDA 라벨링, FSVP/SID, 통관 서류(CIPL, 선하증권), 3PL 계약, 내부 SOP" data-en="FDA labeling, FSVP/SID, customs docs (CIPL, Bill of Lading), 3PL contracts, SOPs">FDA 라벨링, FSVP/SID, 통관 서류(CIPL, 선하증권), 3PL 계약, 내부 SOP</div>
+        <div class="skill-icon">🔧</div>
+        <div class="skill-title" data-kr="툴 &amp; 플랫폼" data-en="Tools &amp; Platforms">툴 &amp; 플랫폼</div>
+        <div class="skill-desc">
+          <ul>
+            <li data-kr="아마존 셀러 센트럴 · Helium 10 · FastMoss" data-en="Amazon Seller Central · Helium 10 · FastMoss">아마존 셀러 센트럴 · Helium 10 · FastMoss</li>
+            <li data-kr="메타 비즈니스 스위트 · Shopify 어드민" data-en="Meta Business Suite · Shopify Admin">메타 비즈니스 스위트 · Shopify 어드민</li>
+            <li data-kr="Google Workspace · Microsoft Office" data-en="Google Workspace · Microsoft Office">Google Workspace · Microsoft Office</li>
+            <li data-kr="Canva · Figma · CapCut · Final Cut Pro" data-en="Canva · Figma · CapCut · Final Cut Pro">Canva · Figma · CapCut · Final Cut Pro</li>
+            <li data-kr="Notion · Asana · Lark · Slack" data-en="Notion · Asana · Lark · Slack">Notion · Asana · Lark · Slack</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
