@@ -582,7 +582,8 @@
     figure { margin: 0; }
     figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; text-align: center; }
     @media (max-width: 640px) {
-      .img-2col, .img-3col, .img-2col-contain { grid-template-columns: 1fr; }
+      .img-2col, .img-3col { grid-template-columns: 1fr; }
+      .img-2col-contain { flex-direction: column; }
     }
 
     /* ── CONTENT BLOCKS ── */
